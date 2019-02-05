@@ -9,6 +9,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public abstract class BaseGenerator {
     /**
@@ -26,11 +27,11 @@ public abstract class BaseGenerator {
     /**
      * la liste des idées possibles dans le graphe (travail à faire)
      */
-    protected List<Idea> ideas = new ArrayList<Idea>();
+    protected List<Idea> ideas = new ArrayList<>();
     /**
      * la liste de tout les liens du graphe
      */
-    protected List<Edge> edges = new ArrayList<Edge>();
+    protected List<Edge> edges = new ArrayList<>();
     /**
      * cet map prefAttachSorted est utilisé pour verifier la loi de disrtibution présenté dans le rapport
      * map qui attribut à chaque noeud une liste de tout les autres noeuds
@@ -74,19 +75,41 @@ public abstract class BaseGenerator {
     public void powerLawVerification() {
 
         nodes.forEach((key, value) -> {
-            if (prefAttachSorted.containsKey((int)value.getDegree())) {
-                prefAttachSorted.get((int)value.getDegree()).add(Math.toIntExact(key));
+            if (prefAttachSorted.containsKey(value.getDegree())) {
+                prefAttachSorted.get(value.getDegree()).add(Math.toIntExact(key));
             } else {
                 List<Integer> list = new ArrayList<>();
                 list.add(Math.toIntExact(key));
-                prefAttachSorted.put((int)value.getDegree(), list);
+                prefAttachSorted.put(value.getDegree(), list);
             }
         });
         prefAttachSorted.forEach((key, value) ->
             System.out.println(" Degré: " + key + " nombre de noeuds: " + value.size())
         );
     }
-
+/*
+idea:nbr de noeuds
+ */
+    public void saveIdeasStatisticsInFile(){
+        try{
+            FileWriter fw=new FileWriter("IdeaStatistics.txt");
+            BufferedWriter bw=new BufferedWriter(fw);
+            Map<Idea,Long> sum=nodes.values().stream().collect(
+                    Collectors.groupingBy(Node::getIdea,Collectors.counting())
+            );
+            sum.forEach((k,v)-> {
+                try {
+                    bw.write(k.getName()+":"+v+"\n");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            });
+            bw.close();
+            fw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     /**
      * cette methode permet de générer un fichier
      * contenant tout les liens du graphe
