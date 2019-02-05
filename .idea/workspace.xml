@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2cfec193-5a59-4b80-ac6c-556dbdc184df" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/bin/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/BaseGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="833">
+              <caret line="169" column="27" selection-start-line="169" selection-start-column="27" selection-end-line="169" selection-end-column="27" />
+              <folding>
+                <element signature="docComment;field#WEIGHT_MAX#0;class#BaseGenerator#0" />
+                <element signature="docComment;field#nbrNodes#0;class#BaseGenerator#0" />
+                <element signature="docComment;field#nbrEdges#0;class#BaseGenerator#0" />
+                <element signature="docComment;field#ideas#0;class#BaseGenerator#0" />
+                <element signature="docComment;field#edges#0;class#BaseGenerator#0" />
+                <element signature="docComment;field#prefAttachSorted#0;class#BaseGenerator#0" />
+                <element signature="docComment;field#nodes#0;class#BaseGenerator#0" />
+                <element signature="docComment;method#initNodes#0;class#BaseGenerator#0" />
+                <element signature="method#initNodes#0;class#BaseGenerator#0" />
+                <element signature="docComment;method#generateRandomWeight#0;class#BaseGenerator#0" />
+                <element signature="method#generateRandomWeight#0;class#BaseGenerator#0" />
+                <element signature="method#powerLawVerification#0;class#BaseGenerator#0" />
+                <element signature="docComment;method#saveEdgesInFile#0;class#BaseGenerator#0" />
+                <element signature="method#saveEdgesInFile#0;class#BaseGenerator#0" />
+                <element signature="docComment;method#drawPowerLaw#0;class#BaseGenerator#0" />
+                <element signature="docComment;method#saveNodesStatistics#0;class#BaseGenerator#0" />
+                <element signature="method#saveNodesStatistics#0;class#BaseGenerator#0" />
+                <element signature="docComment;method#getEdges#0;class#BaseGenerator#0" />
+                <element signature="docComment;method#getRandomIdea#0;class#BaseGenerator#0" />
+                <element signature="method#getRandomIdea#0;class#BaseGenerator#0" />
+                <element signature="docComment;method#getNode#0;class#BaseGenerator#0" />
+                <element signature="docComment;method#getNodes#0;class#BaseGenerator#0" />
+                <element signature="docComment;method#getNbrNodes#0;class#BaseGenerator#0" />
+                <element signature="docComment;method#getNbrEdges#0;class#BaseGenerator#0" />
+                <element signature="docComment;method#getDegreeSum#0;class#BaseGenerator#0" />
+                <element signature="method#getDegreeSum#0;class#BaseGenerator#0" />
+                <element signature="docComment;method#setIdeaValues#0;class#BaseGenerator#0" />
+                <element signature="method#setIdeaValues#0;class#BaseGenerator#0" />
+                <element signature="docComment;method#printIdeaValues#0;class#BaseGenerator#0" />
+                <element signature="n#!!block;n#printIdeaValues#0;n#BaseGenerator#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edges.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="104" selection-start-column="104" selection-end-column="104" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mainPackage/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/RmatGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="151" column="1" selection-start-line="151" selection-start-column="1" selection-end-line="151" selection-end-column="1" />
+              <folding>
+                <element signature="docComment;class#RmatGenerator#0" />
+                <element signature="docComment;field#a#0;class#RmatGenerator#0" />
+                <element signature="docComment;field#b#0;class#RmatGenerator#0" />
+                <element signature="docComment;field#c#0;class#RmatGenerator#0" />
+                <element signature="docComment;field#d#0;class#RmatGenerator#0" />
+                <element signature="docComment;field#k#0;class#RmatGenerator#0" />
+                <element signature="docComment;method#RmatGenerator#0;class#RmatGenerator#0" />
+                <element signature="method#RmatGenerator#0;class#RmatGenerator#0" />
+                <element signature="docComment;method#generateRandomEdge#0;class#RmatGenerator#0" />
+                <element signature="method#generateRandomEdge#0;class#RmatGenerator#0" />
+                <element signature="e#2315#2624#1" />
+                <element signature="e#2376#2612#0" />
+                <element signature="docComment;method#generateQuadrant#0;class#RmatGenerator#0" />
+                <element signature="method#generateQuadrant#0;class#RmatGenerator#0" />
+                <element signature="docComment;method#generate#0;class#RmatGenerator#0" />
+                <element signature="method#generate#0;class#RmatGenerator#0" />
+                <element signature="e#3805#3982#1" />
+                <element signature="e#3911#3978#1" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Interface/MainInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1802">
+              <caret line="126" column="37" selection-start-line="126" selection-start-column="37" selection-end-line="126" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/BarabasiGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="55" column="49" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
+              <folding>
+                <element signature="docComment;field#randomRatio#0;class#BarabasiGenerator#0" />
+                <element signature="docComment;method#BarabasiGenerator#0;class#BarabasiGenerator#0" />
+                <element signature="method#BarabasiGenerator#0;class#BarabasiGenerator#0" />
+                <element signature="docComment;method#generateWithSeed#0;class#BarabasiGenerator#0" />
+                <element signature="method#generateWithSeed#0;class#BarabasiGenerator#0" />
+                <element signature="docComment;method#generateWithoutSeed#0;class#BarabasiGenerator#0" />
+                <element signature="method#generateWithoutSeed#0;class#BarabasiGenerator#0" />
+                <element signature="docComment;method#generateOneNode#0;class#BarabasiGenerator#0" />
+                <element signature="method#generateOneNode#0;class#BarabasiGenerator#0" />
+                <element signature="docComment;method#calculateProbability#0;class#BarabasiGenerator#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mainPackage/Node.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1156">
+              <caret line="122" column="1" selection-start-line="122" selection-start-column="1" selection-end-line="122" selection-end-column="1" />
+              <folding>
+                <element signature="docComment;class#Node#0" />
+                <element signature="docComment;field#idea#0;class#Node#0" />
+                <element signature="docComment;field#num#0;class#Node#0" />
+                <element signature="docComment;method#getInDegree#0;class#Node#0" />
+                <element signature="docComment;method#getOutDegree#0;class#Node#0" />
+                <element signature="docComment;method#getUncertenty#0;class#Node#0" />
+                <element signature="docComment;method#getIdea#0;class#Node#0" />
+                <element signature="docComment;method#setIdea#0;class#Node#0" />
+                <element signature="docComment;method#getNum#0;class#Node#0" />
+                <element signature="docComment;method#setNum#0;class#Node#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/RandomGraphGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
+              <folding>
+                <element signature="docComment;method#RandomGraphGenerator#0;class#RandomGraphGenerator#0" />
+                <element signature="method#RandomGraphGenerator#0;class#RandomGraphGenerator#0" />
+                <element signature="docComment;method#initGraph#0;class#RandomGraphGenerator#0" />
+                <element signature="method#initGraph#0;class#RandomGraphGenerator#0" />
+                <element signature="e#553#618#1" />
+                <element signature="docComment;method#generate#0;class#RandomGraphGenerator#0" />
+                <element signature="method#generate#0;class#RandomGraphGenerator#0" />
+                <element signature="e#752#889#1" />
+                <element signature="e#806#879#1" />
+                <element signature="docComment;method#generateOneEdge#0;class#RandomGraphGenerator#0" />
+                <element signature="method#generateOneEdge#0;class#RandomGraphGenerator#0" />
+                <element signature="e#1180#1343#1" />
+                <element signature="docComment;method#connectedGraph#0;class#RandomGraphGenerator#0" />
+                <element signature="method#connectedGraph#0;class#RandomGraphGenerator#0" />
+                <element signature="docComment;method#printDegrees#0;class#RandomGraphGenerator#0" />
+                <element signature="method#printDegrees#0;class#RandomGraphGenerator#0" />
+                <element signature="e#1664#1724#1" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>generateRandomWeight</find>
+      <find>init</find>
+      <find>&lt;/p</find>
+      <find>generateRandomE</find>
+      <find>saveNodesStatistics</find>
+      <find>savee</find>
+      <find>saveno</find>
+      <find>randomidea</find>
+      <find>saveNodesS</find>
+      <find>toSt</find>
+      <find>class</find>
+      <find>getedges</find>
+      <find>generate(</find>
+      <find>round</find>
+      <find>increme</find>
+      <find>generate</find>
+      <find>incN</find>
+      <find>nodes.</find>
+      <find>initn</find>
+      <find>save</find>
+      <find>getdegree</find>
+      <find>long</find>
+      <find>initialNodes</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Comparator/EdgeComparator.java" />
+        <option value="$PROJECT_DIR$/src/Comparator/NodeComparator.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/JsonFileManager.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/MainInterface.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/Grpah.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/Generator2.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/Graph.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/Generator.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/IdeaSet.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/Idea.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/Edge.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/GraphDrawer.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/BaseGenerator.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/RandomGraphGenerator.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/BarabasiGenerator.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/RmatGenerator.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/Node.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/generators/RmatGenerator.java" />
+        <option value="$PROJECT_DIR$/src/Interface/MainInterface.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/generators/BaseGenerator.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/generators/BarabasiGenerator.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/Main.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/generators/RandomGraphGenerator.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1386" />
+    <option name="height" value="788" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549210597635" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ProjetLongV3/ProjetLong" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="mainPackage.Main" />
+      <module name="ProjetLong" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mainPackage.generators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainInterface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Interface.MainInterface" />
+      <module name="ProjetLong" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Interface.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All Features in: ProjetLong" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="3" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="ProjetLong" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm3SMFormatter" />
+      <option name="SUGGESTED_NAME" value="All Features in: ProjetLong" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.MainInterface" />
+      <item itemvalue="Cucumber java.All Features in: ProjetLong" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MainInterface" />
+        <item itemvalue="Cucumber java.All Features in: ProjetLong" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2cfec193-5a59-4b80-ac6c-556dbdc184df" name="Default Changelist" comment="" />
+      <created>1543406947408</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1543406947408</updated>
+      <workItem from="1543406956247" duration="1847000" />
+      <workItem from="1543524818190" duration="8983000" />
+      <workItem from="1543593841608" duration="2550000" />
+      <workItem from="1544365440382" duration="86000" />
+      <workItem from="1547559728689" duration="3243000" />
+      <workItem from="1547899459749" duration="5243000" />
+      <workItem from="1548253887948" duration="109000" />
+      <workItem from="1548254052609" duration="10987000" />
+      <workItem from="1548351701293" duration="6934000" />
+      <workItem from="1548508216354" duration="2150000" />
+      <workItem from="1548512568134" duration="4447000" />
+      <workItem from="1548595333401" duration="13092000" />
+      <workItem from="1548695417082" duration="664000" />
+      <workItem from="1549098754848" duration="1464000" />
+      <workItem from="1549100605207" duration="3831000" />
+      <workItem from="1549206982337" duration="3601000" />
+      <workItem from="1549225322607" duration="573000" />
+      <workItem from="1549287966837" duration="677000" />
+      <workItem from="1549378406355" duration="232000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="All_Features_in__ProjetLong - 2018.11.28 at 17h 05m 26s.xml">
+      <configuration name="All Features in: ProjetLong" configurationId="CucumberJavaRunConfigurationType" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="70713000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30030257" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3282313" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.21938775" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39965987" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32993197" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3282313" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Statistic" order="13" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Maven" order="9" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30030257" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3282313" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21938775" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39965987" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32993197" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3282313" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Statistic" order="13" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Maven" order="9" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/Cluster.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/Random.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="387" selection-start-line="387" selection-end-line="387" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/Generator2.java" />
+    <entry file="file://$PROJECT_DIR$/src/Comparator/NodeComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="71" selection-start-line="6" selection-start-column="71" selection-end-line="6" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="878" column="39" lean-forward="true" selection-start-line="878" selection-start-column="39" selection-end-line="878" selection-end-column="39" />
+          <folding>
+            <element signature="e#6326#6327#0" expanded="true" />
+            <element signature="e#6394#6395#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/IdeaSet.java" />
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/Idea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+          <folding>
+            <element signature="method#toString#0;class#Idea#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Comparator/EdgeComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/GraphDrawer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="67" column="46" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
+          <folding>
+            <element signature="docComment;class#GraphDrawer#0" />
+            <element signature="method#GraphDrawer#0;class#GraphDrawer#0" />
+            <element signature="method#createChartPanel#0;class#GraphDrawer#0" />
+            <element signature="e#2389#2476#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/Edge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="139" lean-forward="true" selection-start-line="139" selection-end-line="139" />
+          <folding>
+            <element signature="docComment;class#Edge#0" />
+            <element signature="docComment;field#nodeSrc#0;class#Edge#0" />
+            <element signature="docComment;field#nodeDest#0;class#Edge#0" />
+            <element signature="docComment;field#weight#0;class#Edge#0" />
+            <element signature="docComment;field#compteur#0;class#Edge#0" />
+            <element signature="docComment;method#Edge#0;class#Edge#0" />
+            <element signature="method#Edge#0;class#Edge#0" />
+            <element signature="docComment;method#getNodeSrc#0;class#Edge#0" />
+            <element signature="docComment;method#setNodeSrc#0;class#Edge#0" />
+            <element signature="docComment;method#getNodeDest#0;class#Edge#0" />
+            <element signature="docComment;method#setNodeDest#0;class#Edge#0" />
+            <element signature="docComment;method#getWeight#0;class#Edge#0" />
+            <element signature="docComment;method#setWeight#0;class#Edge#0" />
+            <element signature="docComment;method#incrementCompteur#0;class#Edge#0" />
+            <element signature="method#incrementCompteur#0;class#Edge#0" />
+            <element signature="docComment;method#toString#0;class#Edge#0" />
+            <element signature="method#toString#0;class#Edge#0" />
+            <element signature="docComment;method#equals#0;class#Edge#0" />
+            <element signature="method#equals#0;class#Edge#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/JsonFileManager.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/stream/Stream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="1126" column="16" selection-start-line="1126" selection-start-column="16" selection-end-line="1126" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/BaseGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="169" column="27" selection-start-line="169" selection-start-column="27" selection-end-line="169" selection-end-column="27" />
+          <folding>
+            <element signature="docComment;field#WEIGHT_MAX#0;class#BaseGenerator#0" />
+            <element signature="docComment;field#nbrNodes#0;class#BaseGenerator#0" />
+            <element signature="docComment;field#nbrEdges#0;class#BaseGenerator#0" />
+            <element signature="docComment;field#ideas#0;class#BaseGenerator#0" />
+            <element signature="docComment;field#edges#0;class#BaseGenerator#0" />
+            <element signature="docComment;field#prefAttachSorted#0;class#BaseGenerator#0" />
+            <element signature="docComment;field#nodes#0;class#BaseGenerator#0" />
+            <element signature="docComment;method#initNodes#0;class#BaseGenerator#0" />
+            <element signature="method#initNodes#0;class#BaseGenerator#0" />
+            <element signature="docComment;method#generateRandomWeight#0;class#BaseGenerator#0" />
+            <element signature="method#generateRandomWeight#0;class#BaseGenerator#0" />
+            <element signature="method#powerLawVerification#0;class#BaseGenerator#0" />
+            <element signature="docComment;method#saveEdgesInFile#0;class#BaseGenerator#0" />
+            <element signature="method#saveEdgesInFile#0;class#BaseGenerator#0" />
+            <element signature="docComment;method#drawPowerLaw#0;class#BaseGenerator#0" />
+            <element signature="docComment;method#saveNodesStatistics#0;class#BaseGenerator#0" />
+            <element signature="method#saveNodesStatistics#0;class#BaseGenerator#0" />
+            <element signature="docComment;method#getEdges#0;class#BaseGenerator#0" />
+            <element signature="docComment;method#getRandomIdea#0;class#BaseGenerator#0" />
+            <element signature="method#getRandomIdea#0;class#BaseGenerator#0" />
+            <element signature="docComment;method#getNode#0;class#BaseGenerator#0" />
+            <element signature="docComment;method#getNodes#0;class#BaseGenerator#0" />
+            <element signature="docComment;method#getNbrNodes#0;class#BaseGenerator#0" />
+            <element signature="docComment;method#getNbrEdges#0;class#BaseGenerator#0" />
+            <element signature="docComment;method#getDegreeSum#0;class#BaseGenerator#0" />
+            <element signature="method#getDegreeSum#0;class#BaseGenerator#0" />
+            <element signature="docComment;method#setIdeaValues#0;class#BaseGenerator#0" />
+            <element signature="method#setIdeaValues#0;class#BaseGenerator#0" />
+            <element signature="docComment;method#printIdeaValues#0;class#BaseGenerator#0" />
+            <element signature="n#!!block;n#printIdeaValues#0;n#BaseGenerator#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edges.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="104" selection-start-column="104" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interface/MainInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1802">
+          <caret line="126" column="37" selection-start-line="126" selection-start-column="37" selection-end-line="126" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="122" column="1" selection-start-line="122" selection-start-column="1" selection-end-line="122" selection-end-column="1" />
+          <folding>
+            <element signature="docComment;class#Node#0" />
+            <element signature="docComment;field#idea#0;class#Node#0" />
+            <element signature="docComment;field#num#0;class#Node#0" />
+            <element signature="docComment;method#getInDegree#0;class#Node#0" />
+            <element signature="docComment;method#getOutDegree#0;class#Node#0" />
+            <element signature="docComment;method#getUncertenty#0;class#Node#0" />
+            <element signature="docComment;method#getIdea#0;class#Node#0" />
+            <element signature="docComment;method#setIdea#0;class#Node#0" />
+            <element signature="docComment;method#getNum#0;class#Node#0" />
+            <element signature="docComment;method#setNum#0;class#Node#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/BarabasiGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="55" column="49" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
+          <folding>
+            <element signature="docComment;field#randomRatio#0;class#BarabasiGenerator#0" />
+            <element signature="docComment;method#BarabasiGenerator#0;class#BarabasiGenerator#0" />
+            <element signature="method#BarabasiGenerator#0;class#BarabasiGenerator#0" />
+            <element signature="docComment;method#generateWithSeed#0;class#BarabasiGenerator#0" />
+            <element signature="method#generateWithSeed#0;class#BarabasiGenerator#0" />
+            <element signature="docComment;method#generateWithoutSeed#0;class#BarabasiGenerator#0" />
+            <element signature="method#generateWithoutSeed#0;class#BarabasiGenerator#0" />
+            <element signature="docComment;method#generateOneNode#0;class#BarabasiGenerator#0" />
+            <element signature="method#generateOneNode#0;class#BarabasiGenerator#0" />
+            <element signature="docComment;method#calculateProbability#0;class#BarabasiGenerator#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/RandomGraphGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
+          <folding>
+            <element signature="docComment;method#RandomGraphGenerator#0;class#RandomGraphGenerator#0" />
+            <element signature="method#RandomGraphGenerator#0;class#RandomGraphGenerator#0" />
+            <element signature="docComment;method#initGraph#0;class#RandomGraphGenerator#0" />
+            <element signature="method#initGraph#0;class#RandomGraphGenerator#0" />
+            <element signature="e#553#618#1" />
+            <element signature="docComment;method#generate#0;class#RandomGraphGenerator#0" />
+            <element signature="method#generate#0;class#RandomGraphGenerator#0" />
+            <element signature="e#752#889#1" />
+            <element signature="e#806#879#1" />
+            <element signature="docComment;method#generateOneEdge#0;class#RandomGraphGenerator#0" />
+            <element signature="method#generateOneEdge#0;class#RandomGraphGenerator#0" />
+            <element signature="e#1180#1343#1" />
+            <element signature="docComment;method#connectedGraph#0;class#RandomGraphGenerator#0" />
+            <element signature="method#connectedGraph#0;class#RandomGraphGenerator#0" />
+            <element signature="docComment;method#printDegrees#0;class#RandomGraphGenerator#0" />
+            <element signature="method#printDegrees#0;class#RandomGraphGenerator#0" />
+            <element signature="e#1664#1724#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/RmatGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="151" column="1" selection-start-line="151" selection-start-column="1" selection-end-line="151" selection-end-column="1" />
+          <folding>
+            <element signature="docComment;class#RmatGenerator#0" />
+            <element signature="docComment;field#a#0;class#RmatGenerator#0" />
+            <element signature="docComment;field#b#0;class#RmatGenerator#0" />
+            <element signature="docComment;field#c#0;class#RmatGenerator#0" />
+            <element signature="docComment;field#d#0;class#RmatGenerator#0" />
+            <element signature="docComment;field#k#0;class#RmatGenerator#0" />
+            <element signature="docComment;method#RmatGenerator#0;class#RmatGenerator#0" />
+            <element signature="method#RmatGenerator#0;class#RmatGenerator#0" />
+            <element signature="docComment;method#generateRandomEdge#0;class#RmatGenerator#0" />
+            <element signature="method#generateRandomEdge#0;class#RmatGenerator#0" />
+            <element signature="e#2315#2624#1" />
+            <element signature="e#2376#2612#0" />
+            <element signature="docComment;method#generateQuadrant#0;class#RmatGenerator#0" />
+            <element signature="method#generateQuadrant#0;class#RmatGenerator#0" />
+            <element signature="docComment;method#generate#0;class#RmatGenerator#0" />
+            <element signature="method#generate#0;class#RmatGenerator#0" />
+            <element signature="e#3805#3982#1" />
+            <element signature="e#3911#3978#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>9.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>ProjetLong</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>json-simple-1.1.jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
