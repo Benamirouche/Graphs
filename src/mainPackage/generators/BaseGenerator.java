@@ -394,6 +394,139 @@ public abstract class BaseGenerator {
 		}
 
 	} 
+	public void saveFollowingNodes() {
+		Map <Node,List<Node>> organizedList=edges.stream()
+		
+				.collect(Collectors.groupingBy(Edge::getNodeSrc, Collectors.mapping(Edge::getNodeDest, Collectors.toList())));
+				
+		Set<Node> nonFollowingNodes=nodes.values().stream().filter((n)->!organizedList.containsKey(n)).collect(Collectors.toSet());
+				
+	    BufferedWriter bw = null ;
+		FileWriter fw = null;
+		try {
+			fw = new FileWriter("followingLists.txt");
+			bw=new BufferedWriter(fw);
+			final BufferedWriter bw2=bw;
+			
+		   organizedList.forEach((nSrc,listNeighbours)->
+		  
+		   {String line="";
+			   
+		     line+="n"+nSrc.getNum()+" "+"[";
+			
+		     
+		     line+="{"+nSrc.getIdea().name+","+ideas.indexOf(nSrc.getIdea())*0.1+","+new Random().nextFloat()+","+listNeighbours.size()+"}"+",{";
+		     
+		     for(int i=0;i<listNeighbours.size()-1;i++)
+		     {
+		    	 line+="n"+listNeighbours.get(i).getNum()+",";
+		    	 
+		    	 
+		     }
+		     
+			   line+="n"+listNeighbours.get(listNeighbours.size()-1).getNum()+"}]\n";
+			   
+			   try {
+				   
+					bw2.write(line);
+					System.out.println(line);
+					
+				    } catch (IOException e) {
+					e.printStackTrace();
+				   }
+			 
+		   }
+			
+				    );
+		   nonFollowingNodes.forEach(n->{
+			   
+
+			 
+			    String  line="n"+n.getNum()+" "+"["+"{"+n.getIdea().name+","+ideas.indexOf(n.getIdea())*0.1+","+new Random().nextFloat()+","+0+"}"+"]\n";
+			     try {
+					bw2.write(line);
+					System.out.println(line);
+					
+				    } catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				   }
+			   
+		   });
+		   
+		   
+		   
+		   
+		
+			
+			
+
+			System.out.println("Done");
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (bw != null)
+					bw.close();
+				if (fw != null)
+					fw.close();
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			}
+		}
+
+	}
+	
+	
+
+public void saveIdeasApparition() {
+	Map<String,Long> flatedNodes=nodes.entrySet().stream().map(v->v.getValue().getIdea()).collect(Collectors.groupingBy(Idea::getName,Collectors.counting()));
+	
+	
+	   BufferedWriter bw = null  ;
+	   FileWriter fw = null;
+	
+	   	try {
+			fw=new FileWriter("ideas.txt");
+			 bw=new BufferedWriter(fw);
+			 
+			 BufferedWriter bw2=bw;
+			 flatedNodes.forEach((idea,nombreApparition)->{
+					try {
+						bw2.write(idea+":"+nombreApparition+"\n");
+					} catch (IOException e) {
+						
+						e.printStackTrace();
+					}
+				   
+			 });
+			 
+		} catch (IOException e1) {
+		
+			e1.printStackTrace();
+		}
+	   	finally {
+	   		try {
+	   			if (bw != null)
+	   				bw.close();
+	   			if (fw != null)
+	   				fw.close();
+	   			} catch (IOException ex) {
+	   					ex.printStackTrace();
+	   			}
+}
+	  
+	   
+	   
+		   
+		   
+		   
+	   
+}	
+	
+	
+	
+	
     
     
     
