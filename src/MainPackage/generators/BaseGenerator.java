@@ -1,9 +1,9 @@
-package mainPackage.generators;
+package MainPackage.generators;
 
-import mainPackage.Edge;
-import mainPackage.GraphDrawer;
-import mainPackage.Idea;
-import mainPackage.Node;
+import MainPackage.Edge;
+import MainPackage.GraphDrawer;
+import MainPackage.Idea;
+import MainPackage.Node;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -415,7 +415,7 @@ public abstract class BaseGenerator {
 		     line+="n"+nSrc.getNum()+" "+"[";
 			
 		     
-		     line+="{"+nSrc.getIdea().name+","+ideas.indexOf(nSrc.getIdea())*0.1+","+new Random().nextFloat()+","+listNeighbours.size()+"}"+",{";
+		     line+="{"+nSrc.getIdea().getName()+","+ideas.indexOf(nSrc.getIdea())*0.1+","+new Random().nextFloat()+","+listNeighbours.size()+"}"+",{";
 		     
 		     for(int i=0;i<listNeighbours.size()-1;i++)
 		     {
@@ -442,7 +442,7 @@ public abstract class BaseGenerator {
 			   
 
 			 
-			    String  line="n"+n.getNum()+" "+"["+"{"+n.getIdea().name+","+ideas.indexOf(n.getIdea())*0.1+","+new Random().nextFloat()+","+0+"}"+"]\n";
+			    String  line="n"+n.getNum()+" "+"["+"{"+n.getIdea().getName()+","+ideas.indexOf(n.getIdea())*0.1+","+new Random().nextFloat()+","+0+"}"+"]\n";
 			     try {
 					bw2.write(line);
 					System.out.println(line);

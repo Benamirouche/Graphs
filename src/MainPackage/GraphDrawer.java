@@ -1,4 +1,4 @@
-package mainPackage;
+package MainPackage;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -22,7 +22,7 @@ public class GraphDrawer extends JFrame {
 	Map<Integer,List<Integer>> prefAttach;
 
 	public GraphDrawer(Map<Integer,List<Integer>> prefAttach) {
-		 super("Prenferential Attachement RandomGraphGenerator");
+		 super("Distribution des degrés");
 		this.prefAttach=prefAttach;
 		 
 	        JPanel chartPanel = createChartPanel();
@@ -34,9 +34,9 @@ public class GraphDrawer extends JFrame {
 	}
 
 	 private JPanel createChartPanel() {
-		 String chartTitle = "Preferential Attachement";
-		    String xAxisLabel = "X";
-		    String yAxisLabel = "Y";
+		 String chartTitle = "Distribution des degrés";
+		    String xAxisLabel = "Le degré";
+		    String yAxisLabel = "Le nombre de noeuds";
 		 
 		    XYDataset dataset = createDataset();
 		 

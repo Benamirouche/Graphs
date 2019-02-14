@@ -1,8 +1,8 @@
-package mainPackage.generators;
+package MainPackage.generators;
 
 import Comparator.EdgeComparator;
-import mainPackage.Edge;
-import mainPackage.Idea;
+import MainPackage.Edge;
+import MainPackage.Idea;
 
 import java.util.Collections;
 import java.util.List;

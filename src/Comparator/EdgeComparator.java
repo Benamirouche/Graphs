@@ -1,5 +1,5 @@
 package Comparator;
-import mainPackage.Edge;
+import MainPackage.Edge;
 
 import java.util.Comparator;
 

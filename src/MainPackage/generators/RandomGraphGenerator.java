@@ -1,10 +1,11 @@
-package mainPackage.generators;
+package MainPackage.generators;
 
-import mainPackage.Edge;
-import mainPackage.Idea;
-import mainPackage.Node;
+import MainPackage.Edge;
+import MainPackage.Idea;
+import MainPackage.Node;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 public class RandomGraphGenerator extends BaseGenerator{
     /**
@@ -23,7 +24,7 @@ public class RandomGraphGenerator extends BaseGenerator{
      *
      */
     public void initGraph() {
-        for (int i = 0; i < nbrNodes; i++) {
+        for (int i = 1; i <= nbrNodes; i++) {
             nodes.put(i,new Node(getRandomIdea(),i));
         }
     }
@@ -33,11 +34,12 @@ public class RandomGraphGenerator extends BaseGenerator{
      * @param p
      */
     public boolean generate(float p) {
-        for (int i = 0; i < this.nbrNodes; i++) {
-            for (int j = 0; j < this.nbrNodes; j++) {
+        for (int i = 1; i <= this.nbrNodes; i++) {
+            for (int j = 1; j < this.nbrNodes; j++) {
                 generateOneEdge(getNode(i),getNode(j),p);
             }
         }
+        edges=edges.stream().distinct().collect(Collectors.toList());
         return connectedGraph();
     }
 
