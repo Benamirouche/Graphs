@@ -1,9 +1,9 @@
-package mainPackage.generators;
+package MainPackage.generators;
 
 import Exceptions.WrongParametersException;
-import mainPackage.Edge;
-import mainPackage.Idea;
-import mainPackage.Node;
+import MainPackage.Edge;
+import MainPackage.Idea;
+import MainPackage.Node;
 
 import java.util.List;
 import java.util.Random;

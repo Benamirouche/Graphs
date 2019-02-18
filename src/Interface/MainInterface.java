@@ -16,8 +16,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import MainPackage.generators.RmatGenerator;
-import MainPackage.Idea;
+import mainPackage.generators.RmatGenerator;
+import mainPackage.Idea;
 
 import java.util.ArrayList;
 import java.util.List;

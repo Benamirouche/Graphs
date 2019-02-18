@@ -2,32 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cfec193-5a59-4b80-ac6c-556dbdc184df" name="Default Changelist" comment="Adding some comments to BarabasiGenerator and RandomGenerator&#10;Including streams in generateWithoutSeed in BarabsiGenerator&#10;Immigrating the parameters of both generates in BarabasiGenerator to the constructor">
+      <change afterPath="$PROJECT_DIR$/src/MainPackage/GraphWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Comparator/EdgeComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Comparator/EdgeComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Comparator/NodeComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Comparator/NodeComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Interface/MainInterface$1$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Interface/MainInterface$1$1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/mainPackage/Edge.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mainPackage/Edge.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/mainPackage/GraphDrawer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mainPackage/GraphDrawer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/mainPackage/Idea.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mainPackage/Idea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/mainPackage/Main$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/mainPackage/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mainPackage/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/mainPackage/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mainPackage/Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/mainPackage/generators/BarabasiGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mainPackage/generators/BarabasiGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/mainPackage/generators/BaseGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mainPackage/generators/BaseGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/mainPackage/generators/RandomGraphGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mainPackage/generators/RandomGraphGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/mainPackage/generators/RmatGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mainPackage/generators/RmatGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Comparator/EdgeComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Comparator/EdgeComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Comparator/NodeComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Comparator/NodeComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interface/MainInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface/MainInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPackage/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainPackage/Edge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPackage/GraphDrawer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainPackage/GraphDrawer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPackage/Idea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainPackage/Idea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPackage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainPackage/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPackage/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainPackage/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPackage/generators/BarabasiGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainPackage/generators/BarabasiGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPackage/generators/BaseGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainPackage/generators/BaseGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPackage/generators/RandomGraphGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainPackage/generators/RandomGraphGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPackage/generators/RmatGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainPackage/generators/RmatGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainPackage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainPackage/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainPackage/generators/BaseGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainPackage/generators/BaseGenerator.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,55 +21,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MainPackage/generators/BaseGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="162" selection-start-line="162" selection-end-line="162" />
+            <state relative-caret-position="221">
+              <caret line="299" column="2" selection-start-line="299" selection-start-column="2" selection-end-line="299" selection-end-column="2" />
               <folding>
-                <element signature="docComment;field#WEIGHT_MAX#0;class#BaseGenerator#0" />
-                <element signature="docComment;field#nbrNodes#0;class#BaseGenerator#0" />
-                <element signature="docComment;field#nbrEdges#0;class#BaseGenerator#0" />
-                <element signature="docComment;field#ideas#0;class#BaseGenerator#0" />
-                <element signature="docComment;field#edges#0;class#BaseGenerator#0" />
-                <element signature="docComment;field#prefAttachSorted#0;class#BaseGenerator#0" />
-                <element signature="docComment;field#nodes#0;class#BaseGenerator#0" />
-                <element signature="docComment;method#initNodes#0;class#BaseGenerator#0" />
-                <element signature="method#initNodes#0;class#BaseGenerator#0" />
-                <element signature="docComment;method#generateRandomWeight#0;class#BaseGenerator#0" />
-                <element signature="method#generateRandomWeight#0;class#BaseGenerator#0" />
-                <element signature="docComment;method#powerLawVerification#0;class#BaseGenerator#0" />
-                <element signature="docComment;method#saveEdgesInFile#0;class#BaseGenerator#0" />
-                <element signature="docComment;method#drawPowerLaw#0;class#BaseGenerator#0" />
-                <element signature="e#4737#4738#0" expanded="true" />
-                <element signature="e#4803#4804#0" expanded="true" />
-                <element signature="docComment;method#saveNodesStatistics#0;class#BaseGenerator#0" />
-                <element signature="docComment;method#getRandomIdea#0;class#BaseGenerator#0" />
-                <element signature="method#getRandomIdea#0;class#BaseGenerator#0" />
-                <element signature="docComment;method#getNode#0;class#BaseGenerator#0" />
-                <element signature="docComment;method#getNodes#0;class#BaseGenerator#0" />
-                <element signature="docComment;method#getNbrNodes#0;class#BaseGenerator#0" />
-                <element signature="docComment;method#getNbrEdges#0;class#BaseGenerator#0" />
-                <element signature="docComment;method#getDegreeSum#0;class#BaseGenerator#0" />
-                <element signature="method#getDegreeSum#0;class#BaseGenerator#0" />
-                <element signature="docComment;method#setIdeaValues#0;class#BaseGenerator#0" />
-                <element signature="method#setIdeaValues#0;class#BaseGenerator#0" />
-                <element signature="docComment;method#printIdeaValues#0;class#BaseGenerator#0" />
-                <element signature="n#!!block;n#printIdeaValues#0;n#BaseGenerator#0" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#5025#5026#0" expanded="true" />
+                <element signature="e#5091#5092#0" expanded="true" />
+                <element signature="e#5513#5514#0" expanded="true" />
+                <element signature="e#5541#5542#0" expanded="true" />
+                <element signature="e#5932#5933#0" expanded="true" />
+                <element signature="e#5975#5976#0" expanded="true" />
+                <element signature="e#6057#6058#0" expanded="true" />
+                <element signature="e#6085#6086#0" expanded="true" />
+                <element signature="e#6155#6156#0" expanded="true" />
+                <element signature="e#6186#6187#0" expanded="true" />
+                <element signature="e#6256#6257#0" expanded="true" />
+                <element signature="e#6287#6288#0" expanded="true" />
+                <element signature="e#6770#6771#0" expanded="true" />
+                <element signature="e#6834#6835#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MainPackage/GraphWriter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainPackage/generators/BarabasiGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1360">
+            <state relative-caret-position="442">
               <caret line="87" column="121" selection-start-line="87" selection-start-column="121" selection-end-line="87" selection-end-column="121" />
-              <folding>
-                <element signature="e#5808#5809#0" expanded="true" />
-                <element signature="e#5844#5845#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -97,19 +68,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainPackage/generators/RandomGraphGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
+            <state relative-caret-position="391">
               <caret line="37" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="docComment;method#RandomGraphGenerator#0;class#RandomGraphGenerator#0" />
                 <element signature="docComment;method#initGraph#0;class#RandomGraphGenerator#0" />
                 <element signature="docComment;method#generate#0;class#RandomGraphGenerator#0" />
-                <element signature="e#806#879#1" />
                 <element signature="docComment;method#generateOneEdge#0;class#RandomGraphGenerator#0" />
                 <element signature="docComment;method#connectedGraph#0;class#RandomGraphGenerator#0" />
                 <element signature="method#connectedGraph#0;class#RandomGraphGenerator#0" />
                 <element signature="docComment;method#printDegrees#0;class#RandomGraphGenerator#0" />
                 <element signature="method#printDegrees#0;class#RandomGraphGenerator#0" />
-                <element signature="e#1664#1724#1" />
               </folding>
             </state>
           </provider>
@@ -118,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainPackage/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+            <state relative-caret-position="102">
+              <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -127,7 +96,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainPackage/generators/RmatGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
+            <state relative-caret-position="1207">
               <caret line="149" column="69" selection-start-line="149" selection-start-column="8" selection-end-line="149" selection-end-column="69" />
               <folding>
                 <element signature="docComment;class#RmatGenerator#0" />
@@ -214,14 +183,16 @@
         <option value="$PROJECT_DIR$/src/mainPackage/GraphDrawer.java" />
         <option value="$PROJECT_DIR$/src/mainPackage/Main.java" />
         <option value="$PROJECT_DIR$/src/Exceptions/WrongParametersException.java" />
-        <option value="$PROJECT_DIR$/src/MainPackage/Main.java" />
         <option value="$PROJECT_DIR$/src/MainPackage/generators/RandomGraphGenerator.java" />
         <option value="$PROJECT_DIR$/src/MainPackage/generators/BarabasiGenerator.java" />
         <option value="$PROJECT_DIR$/src/mainPackage/generators/BarabasiGenerator.java" />
+        <option value="$PROJECT_DIR$/src/MainPackage/GraphWriter.java" />
+        <option value="$PROJECT_DIR$/src/MainPackage/Main.java" />
+        <option value="$PROJECT_DIR$/src/MainPackage/generators/BaseGenerator.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1386" />
@@ -234,7 +205,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -246,6 +216,12 @@
               <item name="ProjetLong" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjetLong" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjetLong" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetLong" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Exceptions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProjetLong" type="b2602c69:ProjectViewProjectNode" />
@@ -264,12 +240,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550167179043" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550167225686" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ProjetLongV3/ProjetLong" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -293,11 +270,11 @@
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainPackage.Main" />
+      <option name="MAIN_CLASS_NAME" value="mainPackage.Main" />
       <module name="ProjetLong" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="MainPackage.generators.*" />
+          <option name="PATTERN" value="mainPackage.generators.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -379,7 +356,8 @@
       <workItem from="1549378406355" duration="4256000" />
       <workItem from="1549547126908" duration="5081000" />
       <workItem from="1549839166451" duration="953000" />
-      <workItem from="1550160402665" duration="6710000" />
+      <workItem from="1550160402665" duration="7412000" />
+      <workItem from="1550482574231" duration="1893000" />
     </task>
     <task id="LOCAL-00001" summary="with this commit we added a method that outputs a file with ideas and the number of nodes having this idea, the format is &quot;'Idea':nbrOfNodes&quot;">
       <created>1549382034549</created>
@@ -395,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1549548244049</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Adding some comments to BarabasiGenerator and RandomGenerator&#10;Including streams in generateWithoutSeed in BarabsiGenerator&#10;Immigrating the parameters of both generates in BarabasiGenerator to the constructor">
+      <created>1550167210438</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1550167210438</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -404,12 +389,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87481000" />
+    <option name="totallyTimeSpent" value="90076000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1386" height="788" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3137255" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18078668" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -418,16 +404,16 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3282313" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.21835443" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.23469388" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39965987" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32911393" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.079931974" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32993197" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.32753164" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32753164" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Statistic" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -647,47 +633,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainPackage/generators/BaseGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="162" selection-start-line="162" selection-end-line="162" />
-          <folding>
-            <element signature="docComment;field#WEIGHT_MAX#0;class#BaseGenerator#0" />
-            <element signature="docComment;field#nbrNodes#0;class#BaseGenerator#0" />
-            <element signature="docComment;field#nbrEdges#0;class#BaseGenerator#0" />
-            <element signature="docComment;field#ideas#0;class#BaseGenerator#0" />
-            <element signature="docComment;field#edges#0;class#BaseGenerator#0" />
-            <element signature="docComment;field#prefAttachSorted#0;class#BaseGenerator#0" />
-            <element signature="docComment;field#nodes#0;class#BaseGenerator#0" />
-            <element signature="docComment;method#initNodes#0;class#BaseGenerator#0" />
-            <element signature="method#initNodes#0;class#BaseGenerator#0" />
-            <element signature="docComment;method#generateRandomWeight#0;class#BaseGenerator#0" />
-            <element signature="method#generateRandomWeight#0;class#BaseGenerator#0" />
-            <element signature="docComment;method#powerLawVerification#0;class#BaseGenerator#0" />
-            <element signature="docComment;method#saveEdgesInFile#0;class#BaseGenerator#0" />
-            <element signature="docComment;method#drawPowerLaw#0;class#BaseGenerator#0" />
-            <element signature="e#4737#4738#0" expanded="true" />
-            <element signature="e#4803#4804#0" expanded="true" />
-            <element signature="docComment;method#saveNodesStatistics#0;class#BaseGenerator#0" />
-            <element signature="docComment;method#getRandomIdea#0;class#BaseGenerator#0" />
-            <element signature="method#getRandomIdea#0;class#BaseGenerator#0" />
-            <element signature="docComment;method#getNode#0;class#BaseGenerator#0" />
-            <element signature="docComment;method#getNodes#0;class#BaseGenerator#0" />
-            <element signature="docComment;method#getNbrNodes#0;class#BaseGenerator#0" />
-            <element signature="docComment;method#getNbrEdges#0;class#BaseGenerator#0" />
-            <element signature="docComment;method#getDegreeSum#0;class#BaseGenerator#0" />
-            <element signature="method#getDegreeSum#0;class#BaseGenerator#0" />
-            <element signature="docComment;method#setIdeaValues#0;class#BaseGenerator#0" />
-            <element signature="method#setIdeaValues#0;class#BaseGenerator#0" />
-            <element signature="docComment;method#printIdeaValues#0;class#BaseGenerator#0" />
-            <element signature="n#!!block;n#printIdeaValues#0;n#BaseGenerator#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MainPackage/generators/RmatGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
+        <state relative-caret-position="1207">
           <caret line="149" column="69" selection-start-line="149" selection-start-column="8" selection-end-line="149" selection-end-column="69" />
           <folding>
             <element signature="docComment;class#RmatGenerator#0" />
@@ -707,39 +655,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainPackage/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/MainPackage/GraphWriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+        <state relative-caret-position="51">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainPackage/generators/RandomGraphGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
+        <state relative-caret-position="391">
           <caret line="37" selection-start-line="37" selection-end-line="37" />
           <folding>
             <element signature="docComment;method#RandomGraphGenerator#0;class#RandomGraphGenerator#0" />
             <element signature="docComment;method#initGraph#0;class#RandomGraphGenerator#0" />
             <element signature="docComment;method#generate#0;class#RandomGraphGenerator#0" />
-            <element signature="e#806#879#1" />
             <element signature="docComment;method#generateOneEdge#0;class#RandomGraphGenerator#0" />
             <element signature="docComment;method#connectedGraph#0;class#RandomGraphGenerator#0" />
             <element signature="method#connectedGraph#0;class#RandomGraphGenerator#0" />
             <element signature="docComment;method#printDegrees#0;class#RandomGraphGenerator#0" />
             <element signature="method#printDegrees#0;class#RandomGraphGenerator#0" />
-            <element signature="e#1664#1724#1" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainPackage/generators/BarabasiGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
+        <state relative-caret-position="442">
           <caret line="87" column="121" selection-start-line="87" selection-start-column="121" selection-end-line="87" selection-end-column="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainPackage/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainPackage/generators/BaseGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="299" column="2" selection-start-line="299" selection-start-column="2" selection-end-line="299" selection-end-column="2" />
           <folding>
-            <element signature="e#5808#5809#0" expanded="true" />
-            <element signature="e#5844#5845#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#5025#5026#0" expanded="true" />
+            <element signature="e#5091#5092#0" expanded="true" />
+            <element signature="e#5513#5514#0" expanded="true" />
+            <element signature="e#5541#5542#0" expanded="true" />
+            <element signature="e#5932#5933#0" expanded="true" />
+            <element signature="e#5975#5976#0" expanded="true" />
+            <element signature="e#6057#6058#0" expanded="true" />
+            <element signature="e#6085#6086#0" expanded="true" />
+            <element signature="e#6155#6156#0" expanded="true" />
+            <element signature="e#6186#6187#0" expanded="true" />
+            <element signature="e#6256#6257#0" expanded="true" />
+            <element signature="e#6287#6288#0" expanded="true" />
+            <element signature="e#6770#6771#0" expanded="true" />
+            <element signature="e#6834#6835#0" expanded="true" />
           </folding>
         </state>
       </provider>

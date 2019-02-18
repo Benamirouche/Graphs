@@ -1,5 +1,5 @@
 package Comparator;
-import MainPackage.Node;
+import mainPackage.Node;
 
 import java.util.Comparator;
 

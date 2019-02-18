@@ -1,8 +1,8 @@
-package MainPackage.generators;
+package mainPackage.generators;
 
-import MainPackage.Edge;
-import MainPackage.Idea;
-import MainPackage.Node;
+import mainPackage.Edge;
+import mainPackage.Idea;
+import mainPackage.Node;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
