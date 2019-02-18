@@ -6,6 +6,7 @@ import mainPackage.Idea;
 import mainPackage.Node;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
@@ -16,7 +17,7 @@ public abstract class BaseGenerator {
      /**
      * 
      */
-	public static final String BASE_PATH="ProjectFiles"+File.separator;
+	public static final String BASE_PATH="ProjectFiles"+ File.separator;
 	
      /**
      *
@@ -101,9 +102,7 @@ public abstract class BaseGenerator {
             System.out.println(" Degré: " + key + " nombre de noeuds: " + value.size())
         );
     }
-/*
-idea:nbr de noeuds
- */
+
     public void saveIdeasStatisticsInFile(){
         try{
             FileWriter fw=new FileWriter("IdeaStatistics.txt");
@@ -266,7 +265,6 @@ idea:nbr de noeuds
     
     /**
     anis changes**/
-	'
 		
 		public void saveEdgesGEXF() {
 		BufferedWriter bw = null;
@@ -293,9 +291,13 @@ idea:nbr de noeuds
 			{
 				
 				
-				bw.write("\t\t\t<node id=\""+node.getNum()+"\" label=\""+node.getName()+"\">\n");
+				bw.write("\t\t\t<node id=\""+node.getNum()+"\" label=\""+"node "+node.getNum()+"\">\n");
 				bw.write("\t\t\t\t<attvalues>\n");
+//<<<<<<< HEAD:src/mainPackage/generators/BaseGenerator.java
+     			bw.write("\t\t\t\t\t<attvalue for=\"0\" value=\""+node.getIdea().getName()+"\"/>\n");
+//=======
      			bw.write("\t\t\t\t\t<attvalue for=\"0\" value=\""+node.getIdea().getName()+"\"/>\n");	
+//>>>>>>> origin/master:src/mainPackage/generators/BaseGenerator.java
      			bw.write("\t\t\t\t</attvalues>\n");
      		
      			bw.write("\t\t\t</node>\n\n");

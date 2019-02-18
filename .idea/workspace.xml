@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2cfec193-5a59-4b80-ac6c-556dbdc184df" name="Default Changelist" comment="Adding some comments to BarabasiGenerator and RandomGenerator&#10;Including streams in generateWithoutSeed in BarabsiGenerator&#10;Immigrating the parameters of both generates in BarabasiGenerator to the constructor">
-      <change afterPath="$PROJECT_DIR$/src/MainPackage/GraphWriter.java" afterDir="false" />
+    <list default="true" id="2cfec193-5a59-4b80-ac6c-556dbdc184df" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/mainPackage/generators/BaseGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/mainPackage/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mainPackage/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/mainPackage/generators/BaseGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mainPackage/generators/BaseGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainPackage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainPackage/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainPackage/generators/BaseGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainPackage/generators/BaseGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPackage/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPackage/Edge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPackage/GraphDrawer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPackage/GraphDrawer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPackage/Idea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPackage/Idea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPackage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPackage/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPackage/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPackage/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPackage/generators/BarabasiGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPackage/generators/BarabasiGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPackage/generators/RmatGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPackage/generators/RmatGenerator.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,9 +27,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/MainPackage/generators/BaseGenerator.java">
+        <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/BaseGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="5083">
               <caret line="299" column="2" selection-start-line="299" selection-start-column="2" selection-end-line="299" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -48,16 +53,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MainPackage/GraphWriter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MainPackage/generators/BarabasiGenerator.java">
+        <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/BarabasiGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
               <caret line="87" column="121" selection-start-line="87" selection-start-column="121" selection-end-line="87" selection-end-column="121" />
@@ -66,7 +62,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MainPackage/generators/RandomGraphGenerator.java">
+        <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/RandomGraphGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
               <caret line="37" selection-start-line="37" selection-end-line="37" />
@@ -85,7 +81,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MainPackage/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/mainPackage/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
               <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
@@ -94,7 +90,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MainPackage/generators/RmatGenerator.java">
+        <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/RmatGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1207">
               <caret line="149" column="69" selection-start-line="149" selection-start-column="8" selection-end-line="149" selection-end-column="69" />
@@ -179,7 +175,6 @@
         <option value="$PROJECT_DIR$/src/mainPackage/generators/RmatGenerator.java" />
         <option value="$PROJECT_DIR$/src/Interface/MainInterface.java" />
         <option value="$PROJECT_DIR$/src/mainPackage/generators/RandomGraphGenerator.java" />
-        <option value="$PROJECT_DIR$/src/mainPackage/generators/BaseGenerator.java" />
         <option value="$PROJECT_DIR$/src/mainPackage/GraphDrawer.java" />
         <option value="$PROJECT_DIR$/src/mainPackage/Main.java" />
         <option value="$PROJECT_DIR$/src/Exceptions/WrongParametersException.java" />
@@ -189,6 +184,7 @@
         <option value="$PROJECT_DIR$/src/MainPackage/GraphWriter.java" />
         <option value="$PROJECT_DIR$/src/MainPackage/Main.java" />
         <option value="$PROJECT_DIR$/src/MainPackage/generators/BaseGenerator.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/generators/BaseGenerator.java" />
       </list>
     </option>
   </component>
@@ -227,13 +223,13 @@
               <item name="ProjetLong" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjetLong" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="MainPackage" type="462c0819:PsiDirectoryNode" />
+              <item name="mainPackage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProjetLong" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjetLong" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="MainPackage" type="462c0819:PsiDirectoryNode" />
+              <item name="mainPackage" type="462c0819:PsiDirectoryNode" />
               <item name="generators" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -246,7 +242,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550167225686" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550484894515" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ProjetLongV3/ProjetLong" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -357,7 +353,7 @@
       <workItem from="1549547126908" duration="5081000" />
       <workItem from="1549839166451" duration="953000" />
       <workItem from="1550160402665" duration="7412000" />
-      <workItem from="1550482574231" duration="1893000" />
+      <workItem from="1550482574231" duration="2146000" />
     </task>
     <task id="LOCAL-00001" summary="with this commit we added a method that outputs a file with ideas and the number of nodes having this idea, the format is &quot;'Idea':nbrOfNodes&quot;">
       <created>1549382034549</created>
@@ -380,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1550167210438</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adding some comments to BarabasiGenerator and RandomGenerator&#10;Including streams in generateWithoutSeed in BarabsiGenerator&#10;Immigrating the parameters of both generates in BarabasiGenerator to the constructor">
+      <created>1550484818841</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1550484818841</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -389,13 +392,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90076000" />
+    <option name="totallyTimeSpent" value="90329000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18078668" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18078668" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -409,11 +411,11 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.079931974" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.079931974" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32993197" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32753164" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3265306" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Statistic" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -506,7 +508,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainPackage/Edge.java">
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/Edge.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
           <caret line="139" lean-forward="true" selection-start-line="139" selection-end-line="139" />
@@ -566,7 +568,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainPackage/Idea.java">
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/Idea.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
@@ -576,7 +578,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainPackage/GraphDrawer.java">
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/GraphDrawer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="38" column="52" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="52" />
@@ -612,7 +614,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainPackage/Node.java">
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/Node.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1024">
           <caret line="122" column="1" selection-start-line="122" selection-start-column="1" selection-end-line="122" selection-end-column="1" />
@@ -633,7 +635,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainPackage/generators/RmatGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/RmatGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1207">
           <caret line="149" column="69" selection-start-line="149" selection-start-column="8" selection-end-line="149" selection-end-column="69" />
@@ -662,7 +664,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainPackage/generators/RandomGraphGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/RandomGraphGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="37" selection-start-line="37" selection-end-line="37" />
@@ -679,23 +681,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainPackage/generators/BarabasiGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/BarabasiGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="87" column="121" selection-start-line="87" selection-start-column="121" selection-end-line="87" selection-end-column="121" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainPackage/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainPackage/generators/BaseGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/BaseGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="5083">
           <caret line="299" column="2" selection-start-line="299" selection-start-column="2" selection-end-line="299" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />

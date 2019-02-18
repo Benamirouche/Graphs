@@ -1,7 +1,7 @@
-package MainPackage;
+package mainPackage;
 
 import Exceptions.WrongParametersException;
-import MainPackage.generators.BarabasiGenerator;
+import mainPackage.generators.BarabasiGenerator;
 
 import javax.swing.*;
 import java.util.ArrayList;

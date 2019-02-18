@@ -1,4 +1,4 @@
-package MainPackage;
+package mainPackage;
 
 /**
  * <h1>Node est la classe qui représente un noeud</h1>

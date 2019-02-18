@@ -1,4 +1,4 @@
-package MainPackage;
+package mainPackage;
 
 /**
  * Idea la classe qui represente l'idée qu'un noeud peut adopter
