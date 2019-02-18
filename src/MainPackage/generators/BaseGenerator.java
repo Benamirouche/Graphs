@@ -1,9 +1,9 @@
-package MainPackage.generators;
+package mainPackage.generators;
 
-import MainPackage.Edge;
-import MainPackage.GraphDrawer;
-import MainPackage.Idea;
-import MainPackage.Node;
+import mainPackage.Edge;
+import mainPackage.GraphDrawer;
+import mainPackage.Idea;
+import mainPackage.Node;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -12,6 +12,20 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public abstract class BaseGenerator {
+	
+     /**
+     * 
+     */
+	public static final String BASE_PATH="ProjectFiles"+File.separator;
+	
+     /**
+     *
+     */
+	public static final String LOGS_PATH=BASE_PATH+"logs"+File.separator;
+	/**
+     *
+     */
+	public static final String GRAPHS_PATH=BASE_PATH+"graphs"+File.separator;
     /**
      * le seuil à ne pas dépasser pour les poids des liens
      */
@@ -87,7 +101,9 @@ public abstract class BaseGenerator {
             System.out.println(" Degré: " + key + " nombre de noeuds: " + value.size())
         );
     }
-
+/*
+idea:nbr de noeuds
+ */
     public void saveIdeasStatisticsInFile(){
         try{
             FileWriter fw=new FileWriter("IdeaStatistics.txt");
@@ -250,11 +266,13 @@ public abstract class BaseGenerator {
     
     /**
     anis changes**/
-    public void saveEdgesGEXF() {
+	'
+		
+		public void saveEdgesGEXF() {
 		BufferedWriter bw = null;
 		FileWriter fw = null;
 		try {
-			fw = new FileWriter("graph.gexf");
+			fw = new FileWriter(GRAPHS_PATH+"graph.gexf");
 			bw = new BufferedWriter(fw);
 			bw.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
 			bw.write("<gexf xmlns=\"http://www.gexf.net/1.2draft\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd\" version=\"1.2\">\n");
@@ -275,9 +293,9 @@ public abstract class BaseGenerator {
 			{
 				
 				
-				bw.write("\t\t\t<node id=\""+node.getNum()+"\" label=\""+"node "+node.getNum()+"\">\n");
+				bw.write("\t\t\t<node id=\""+node.getNum()+"\" label=\""+node.getName()+"\">\n");
 				bw.write("\t\t\t\t<attvalues>\n");
-     			bw.write("\t\t\t\t\t<attvalue for=\"0\" value=\""+node.getIdea().getName()+"\"/>\n");
+     			bw.write("\t\t\t\t\t<attvalue for=\"0\" value=\""+node.getIdea().getName()+"\"/>\n");	
      			bw.write("\t\t\t\t</attvalues>\n");
      		
      			bw.write("\t\t\t</node>\n\n");
@@ -324,11 +342,22 @@ public abstract class BaseGenerator {
 				.collect(Collectors.groupingBy(Edge::getNodeDest, Collectors.mapping(Edge::getNodeSrc, Collectors.toList())));
 				
 		Set<Node> nonFollowedNodes=nodes.values().stream().filter((n)->!organizedList.containsKey(n)).collect(Collectors.toSet());
+	
+		
+		
+		
+		Map <Node,List<Node>> followingList=edges.stream()
 				
+				.collect(Collectors.groupingBy(Edge::getNodeSrc, Collectors.mapping(Edge::getNodeDest, Collectors.toList())));
+				
+		Set<Node> nonFollowingNodes=nodes.values().stream().filter((n)->!organizedList.containsKey(n)).collect(Collectors.toSet());
+				nonFollowingNodes.forEach(node->followingList.put(node,new ArrayList<Node>()));
+		
+		
 	    BufferedWriter bw = null ;
 		FileWriter fw = null;
 		try {
-			fw = new FileWriter("edgesN.txt");
+			fw = new FileWriter(GRAPHS_PATH+"edgesN.graph");
 			bw=new BufferedWriter(fw);
 			final BufferedWriter bw2=bw;
 			
@@ -487,7 +516,7 @@ public void saveIdeasApparition() {
 	   FileWriter fw = null;
 	
 	   	try {
-			fw=new FileWriter("ideas.txt");
+			fw=new FileWriter(GRAPHS_PATH+"ideas.txt");
 			 bw=new BufferedWriter(fw);
 			 
 			 BufferedWriter bw2=bw;
@@ -523,6 +552,11 @@ public void saveIdeasApparition() {
 		   
 	   
 }	
+
+	
+	
+	
+  	
 	
 	
 	
