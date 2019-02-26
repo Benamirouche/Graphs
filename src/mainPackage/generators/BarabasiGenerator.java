@@ -145,14 +145,22 @@ public class BarabasiGenerator extends BaseGenerator {
     }
 
     /**
-     *
-     * @param existentNode
-     * @return
+     * <p>
+     *     Cette fonction calcule la probabilité qu'un nouveau neoud crée un lien avec noeud qui existe déja
+     *     dans le graphe, cette probabilité est infulencé par le degré du noeud existant et la somme des degrés
+     *     de tous les noeud dans le graphe.
+     * </p>
+     * @param existentNode est le existant
+     * @return la probabilité qui sera entre 0 et 1
      */
     private float calculateProbability(Node existentNode) {
         return (float)existentNode.getDegree()/getDegreeSum();
     }
 
+    /**
+     * retourne le nombre de noeuds final qu'on espère atteindre
+     * @return le nombre de noeuds final qu'on espère atteindre
+     */
     public int getFinalNbrNodes() {
         return finalNbrNodes;
     }

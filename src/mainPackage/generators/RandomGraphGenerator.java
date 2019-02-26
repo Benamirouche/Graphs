@@ -3,15 +3,19 @@ package mainPackage.generators;
 import mainPackage.Edge;
 import mainPackage.Idea;
 import mainPackage.Node;
+
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 
 public class RandomGraphGenerator extends BaseGenerator{
     /**
-     *
-     * @param nbrNodes
-     * @param ideas
+     * <p>
+     *     le constructeur du graphe aléatoire qui prends en paramètres le nombre de noeuds et
+     *     la liste des idées possibles
+     * </p>
+     * @param nbrNodes le nombre de noeuds
+     * @param ideas la liste des idées possible dans le graphe
      */
     public RandomGraphGenerator(int nbrNodes, List<Idea> ideas) {
         this.nbrNodes=nbrNodes;
@@ -21,7 +25,10 @@ public class RandomGraphGenerator extends BaseGenerator{
     }
 
     /**
-     *
+     * <p>
+     *     Cette methode initialise le graphe en instanciant tous les noeuds avec des idées aléatoires
+     * </p>
+     * todo streams instead of for loops
      */
     public void initGraph() {
         for (int i = 1; i <= nbrNodes; i++) {
@@ -30,7 +37,10 @@ public class RandomGraphGenerator extends BaseGenerator{
     }
 
     /**
-     *
+     * <p>
+     *     Cette fonction est responsable de la generation du graphe
+     * </p>
+     * todo streams instead of for loops
      * @param p
      */
     public boolean generate(float p) {
@@ -44,10 +54,13 @@ public class RandomGraphGenerator extends BaseGenerator{
     }
 
     /**
-     *
-     * @param i
-     * @param j
-     * @param p
+     * <p>
+     *     Cette fonction crée un seul lien entre deux noeuds précis avec un poids aleatoire
+     *     celon une probabilité
+     * </p>
+     * @param i le noeud source
+     * @param j le noeud destinataire
+     * @param p la probabilité de créer un lien entre les deux noeuds
      */
     public void generateOneEdge(Node i,Node j,float p){
         Random random = new Random();
@@ -63,8 +76,10 @@ public class RandomGraphGenerator extends BaseGenerator{
     }
 
     /**
-     *
-     * @return
+     * <p>
+     *     verifie si le graphe est connexe
+     * </p>
+     * @return vrai si le graphe et connexe et faux sinon
      */
     public boolean connectedGraph(){
         int i= (int) nodes.values().stream().filter(n->n.getDegree()==0).count();
@@ -73,7 +88,7 @@ public class RandomGraphGenerator extends BaseGenerator{
     }
 
     /**
-     *
+     * experimental
      */
     public void printDegrees(){
         for (Node n : this.nodes.values()) {

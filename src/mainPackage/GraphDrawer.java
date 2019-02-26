@@ -33,7 +33,7 @@ public class GraphDrawer extends JFrame {
 	        setLocationRelativeTo(null);
 	}
 
-	 private JPanel createChartPanel() {
+	private JPanel createChartPanel() {
 		 String chartTitle = "Distribution des degrés";
 		    String xAxisLabel = "Le degré";
 		    String yAxisLabel = "Le nombre de noeuds";
@@ -62,7 +62,7 @@ public class GraphDrawer extends JFrame {
 		    return new ChartPanel(chart);
 	    }
 	 
-	    private XYDataset createDataset() {
+	private XYDataset createDataset() {
 	    	XYSeriesCollection dataset = new XYSeriesCollection();
 	        XYSeries series1 = new XYSeries("power law degree");
 	        for(Map.Entry<Integer,List<Integer>> entry:prefAttach.entrySet())

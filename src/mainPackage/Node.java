@@ -18,19 +18,23 @@ public class Node  {
 	 * l'identificateur du noeud
 	 */
 	private int num;
+
 	/**
-	 * le nombre de voisins qui est équivalent au nombre d'appartion
-	 * dans la liste des liens
+	 * le nombre de liens entrants dans ce noeud
 	 */
  	private int inDegree =0;
 
- 	private int outDegree=0;
+	/**
+	 * le nombre de liens sortants de ce noeud
+	 */
+	private int outDegree=0;
 
+	/**
+	 * le degree d'incertitude
+	 */
  	private float uncertenty;
+	// TODO : degre d'insertitude 0~1 getRandomUncertenty
 
- 	/* degre d'insertitude 0~1
- 	   getRandomUncertenty
- 	 */
 
 	/**
 	 * constructeur d'un noeud
@@ -44,39 +48,44 @@ public class Node  {
  	}
 
 	/**
-	 * incrémente le nombre de voisins
+	 * incrémente le degré entrant
 	 */
 	public void incInDegree() {
 		inDegree++;
 	}
 
+	/**
+	 * incrémente le degré sortant
+	 */
 	public void incOutDegree(){
 		outDegree++;
 	}
 
+	/**
+	 * getter de degrés total du noeud
+	 * @return le degré de centralité du noeud, qui est égale à la somme des degrés sortant et entrant
+	 */
 	public int getDegree(){
 		return inDegree+outDegree;
 	}
 
-
-
 	/**
-	 * retourne le nombre de voisins
-	 * @return le nombre de voisins
+	 * retourne le degré entrant du noeud
+	 * @return le degré entrant du noeud
 	 */
 	public int getInDegree() {return inDegree;}
 
 	/**
-	 *
-	 * @return
+	 * retourne le degré sortant du noeud
+	 * @return le degré sortant du noeud
 	 */
 	public int getOutDegree() {
 		return outDegree;
 	}
 
 	/**
-	 *
-	 * @return
+	 * retourne le degré d'insertitude de ce noeud
+	 * @return le degré d'insertitude de ce noeud
 	 */
 	public float getUncertenty() {
 		return uncertenty;
@@ -87,9 +96,7 @@ public class Node  {
 	 * retourne l'idée adopté par le noeud
 	 * @return l'idée adopté par le noeud
 	 */
-	public Idea getIdea() {
-	return idea;
-}
+	public Idea getIdea() {	return idea;}
 
 	/**
 	 * mettre a jour l'idée adopté
@@ -115,6 +122,10 @@ public class Node  {
 		this.num = num;
 	}
 
+	/**
+	 * represente le neoud sous forme d'une chaine de caractères
+	 * @return la chaine de caractère qui représente le neoud
+	 */
 	public String toString()
 	{
 		return "node num: "+this.getNum();

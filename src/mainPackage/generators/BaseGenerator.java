@@ -13,18 +13,18 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public abstract class BaseGenerator {
-	
-     /**
-     * 
-     */
+
+	/**
+    * le chemin (relatif) base du repertoire qui contiendra les fichiers de sorties
+    */
 	public static final String BASE_PATH="ProjectFiles"+ File.separator;
 	
-     /**
-     *
+	/**
+     * le chemin (relatif) vers le fichier des logs
      */
 	public static final String LOGS_PATH=BASE_PATH+"logs"+File.separator;
 	/**
-     *
+	 * le chemin (relatif) vers le fichier du graphe
      */
 	public static final String GRAPHS_PATH=BASE_PATH+"graphs"+File.separator;
     /**
@@ -40,7 +40,7 @@ public abstract class BaseGenerator {
      */
     protected int nbrEdges=0;
     /**
-     * la liste des idées possibles dans le graphe (travail à faire)
+     * la liste des idées possibles dans le graphe
      */
     protected List<Idea> ideas = new ArrayList<>();
     /**
@@ -103,6 +103,7 @@ public abstract class BaseGenerator {
         );
     }
 
+    //TODO comment after updating the code
     public void saveIdeasStatisticsInFile(){
         try{
             FileWriter fw=new FileWriter("IdeaStatistics.txt");
@@ -198,46 +199,51 @@ public abstract class BaseGenerator {
         return ideas.get(random.nextInt(ideas.size() - 1));
     }
 
+	/**
+	 * retourne la liste des idées possibles dans le graphe
+	 * @return la liste des idées possibles dans le graphe
+	 */
 	public List<Idea> getIdeas() {
 		return ideas;
 	}
 
 	/**
-     *
-     * @param node
-     * @return
+     *retourne le noeud correspondant au numéro indiqué en paramètre
+     * @param node le numéro du noeud
+     * @return le noeud correspondant au numéro indiqué
      */
     public Node getNode(int node) {
         return this.nodes.get(node);
     }
 
     /**
-     *
-     * @return
+     * retourne une map qui contient tous les noeuds avec leurs numéros comme clés
+     * @return une map qui contient tous les noeuds avec leurs numéros comme clés
      */
     public Map<Integer, Node> getNodes() {
         return nodes;
     }
 
     /**
-     *
-     * @return
+     * retourne le nombre de neouds dans le graphe
+     * @return le nombre de neouds dans le graphe
      */
     public int getNbrNodes() {
         return nbrNodes;
     }
 
     /**
-     *
-     * @return
+     * retourne le nombre de liens dans le graphe
+     * @return le nombre de liens dans le graphe
      */
     public int getNbrEdges() {
         return nbrEdges;
     }
 
     /**
-     *
-     * @return
+     * calcule la somme des degrés de tous les noeuds du graphe
+     * @return la somme des degrés de tous les noeuds du graphe
+	 * //todo streams instead of for loop
      */
     public int getDegreeSum() {
         int s=0;
@@ -249,7 +255,8 @@ public abstract class BaseGenerator {
     }
 
     /**
-     *
+     *^just trying to help anass with the values of h=the ideas
+	 * // todo remove this in the end of the project
      */
     public void setIdeaValues(){
         float v=-1;
@@ -261,16 +268,18 @@ public abstract class BaseGenerator {
     }
 
     /**
-     *
+	 *^just trying to help anass with the values of h=the ideas
+     * // todo also remove this in the end
      */
     public void printIdeaValues(){
         this.ideas.stream().forEach(System.out::println);
     }
-    
+
+    //todo review this with anis
     /**
     anis changes**/
 		
-		public void saveEdgesGEXF() {
+    public void saveEdgesGEXF() {
 		BufferedWriter bw = null;
 		FileWriter fw = null;
 		try {
@@ -412,8 +421,7 @@ public abstract class BaseGenerator {
 					System.out.println(line);
 					
 				    } catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+			     	e.printStackTrace();
 				   }
 			   
 		   });
@@ -493,7 +501,6 @@ public abstract class BaseGenerator {
 					System.out.println(line);
 					
 				    } catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				   }
 			   
