@@ -198,7 +198,11 @@ public abstract class BaseGenerator {
         return ideas.get(random.nextInt(ideas.size() - 1));
     }
 
-    /**
+	public List<Idea> getIdeas() {
+		return ideas;
+	}
+
+	/**
      *
      * @param node
      * @return
@@ -338,24 +342,39 @@ public abstract class BaseGenerator {
 		}
 	}
 
+	public Map<Node,List<Node>> getOrganizedFollowersList() {
+		return edges.stream()
+				.collect(Collectors.groupingBy
+							(Edge::getNodeDest,
+							 Collectors.mapping(Edge::getNodeSrc, Collectors.toList()))
+						);
+	}
+	public Set<Node> getNonFollowedNodes(Map<Node,List<Node>> organizedList){
+		return nodes.values()
+				.stream()
+				.filter((n)->!organizedList.containsKey(n))
+				.collect(Collectors.toSet());
+	}
+
+	public Map<Node,List<Node>> getOrganizedFollowingList(){
+		return edges.stream()
+				.collect(Collectors.groupingBy(Edge::getNodeSrc,
+												Collectors.mapping(Edge::getNodeDest, Collectors.toList()))
+						);
+	}
+	public Set<Node> getNonFollowingNodes(Map<Node,List<Node>> organizedList){
+			return nodes.values().stream().filter((n)->!organizedList.containsKey(n)).collect(Collectors.toSet());
+	}
+
    	public void getNodesNeighbours() {
-		Map <Node,List<Node>> organizedList=edges.stream()
-		
-				.collect(Collectors.groupingBy(Edge::getNodeDest, Collectors.mapping(Edge::getNodeSrc, Collectors.toList())));
-				
-		Set<Node> nonFollowedNodes=nodes.values().stream().filter((n)->!organizedList.containsKey(n)).collect(Collectors.toSet());
-	
-		
-		
-		
-		Map <Node,List<Node>> followingList=edges.stream()
-				
-				.collect(Collectors.groupingBy(Edge::getNodeSrc, Collectors.mapping(Edge::getNodeDest, Collectors.toList())));
-				
-		Set<Node> nonFollowingNodes=nodes.values().stream().filter((n)->!organizedList.containsKey(n)).collect(Collectors.toSet());
-				nonFollowingNodes.forEach(node->followingList.put(node,new ArrayList<Node>()));
-		
-		
+		Map<Node,List<Node>> followersList=getOrganizedFollowersList();
+		Set<Node> nonFollowedNodes=getNonFollowedNodes(followersList);
+		nonFollowedNodes.forEach(node->followersList.put(node,new ArrayList<Node>()));
+
+		Map <Node,List<Node>> followingList=getOrganizedFollowingList();
+		Set<Node> nonFollowingNodes=getNonFollowingNodes(followersList);
+		nonFollowingNodes.forEach(node->followingList.put(node,new ArrayList<Node>()));
+
 	    BufferedWriter bw = null ;
 		FileWriter fw = null;
 		try {
@@ -363,29 +382,19 @@ public abstract class BaseGenerator {
 			bw=new BufferedWriter(fw);
 			final BufferedWriter bw2=bw;
 			
-		   organizedList.forEach((nSrc,listNeighbours)->
+		   followersList.forEach((nSrc,listNeighbours)->
 		  
 		   {String line="";
-			   
 		     line+="n"+nSrc.getNum()+" "+"[";
-			
-		     
 		     line+="{"+nSrc.getIdea().getName()+","+ideas.indexOf(nSrc.getIdea())*0.1+","+new Random().nextFloat()+","+listNeighbours.size()+"}"+",{";
-		     
 		     for(int i=0;i<listNeighbours.size()-1;i++)
 		     {
 		    	 line+="n"+listNeighbours.get(i).getNum()+",";
-		    	 
-		    	 
 		     }
-		     
 			   line+="n"+listNeighbours.get(listNeighbours.size()-1).getNum()+"}]\n";
-			   
 			   try {
-				   
 					bw2.write(line);
 					System.out.println(line);
-					
 				    } catch (IOException e) {
 					e.printStackTrace();
 				   }
@@ -424,13 +433,18 @@ public abstract class BaseGenerator {
 			}
 		}
 
-	} 
+	}
 	public void saveFollowingNodes() {
 		Map <Node,List<Node>> organizedList=edges.stream()
 		
-				.collect(Collectors.groupingBy(Edge::getNodeSrc, Collectors.mapping(Edge::getNodeDest, Collectors.toList())));
+				.collect(Collectors.groupingBy(Edge::getNodeSrc,
+						                       Collectors.mapping(Edge::getNodeDest, Collectors.toList()))
+						);
 				
-		Set<Node> nonFollowingNodes=nodes.values().stream().filter((n)->!organizedList.containsKey(n)).collect(Collectors.toSet());
+		Set<Node> nonFollowingNodes=nodes.values()
+									.stream()
+									.filter((n)->!organizedList.containsKey(n))
+									.collect(Collectors.toSet());
 				
 	    BufferedWriter bw = null ;
 		FileWriter fw = null;
@@ -507,10 +521,7 @@ public abstract class BaseGenerator {
 		}
 
 	}
-	
-	
-
-public void saveIdeasApparition() {
+	public void saveIdeasApparition() {
 	Map<String,Long> flatedNodes=nodes.entrySet().stream().map(v->v.getValue().getIdea()).collect(Collectors.groupingBy(Idea::getName,Collectors.counting()));
 	
 	

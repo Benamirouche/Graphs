@@ -1,9 +1,11 @@
 package mainPackage;
 
 import Exceptions.WrongParametersException;
+import mainPackage.GraphWriters.WriterTest;
 import mainPackage.generators.BarabasiGenerator;
 
 import javax.swing.*;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,7 +47,16 @@ public class Main {
            System.out.println(g.getNodes().size());
            g.powerLawVerification();
            g.drawPowerLaw();
-           g.saveEdgesGEXF();
+           WriterTest wt=new WriterTest(g);
+
+           try {
+               wt.openFile();
+               wt.write();
+               wt.close();
+           } catch (IOException e) {
+               e.printStackTrace();
+           }
+           //g.saveEdgesGEXF();
             //bg.saveEdgesInFile();
        });
 	}
