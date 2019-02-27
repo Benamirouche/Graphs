@@ -21,7 +21,7 @@ public class JgraphTGenerators extends BaseGenerator {
     protected GraphGenerator<Node,DefaultEdge,Node> graphGenerator;
     protected List<Idea>  ideas;
 
-    public JgraphTGenerators(List<Idea> ideas,GraphGenerator<Node,DefaultEdge,Node> graphGenerator ){
+    protected  JgraphTGenerators(List<Idea> ideas,GraphGenerator<Node,DefaultEdge,Node> graphGenerator ){
         this.ideas=ideas;
         this.graphGenerator=graphGenerator;
         Supplier<Node> nodeSupplier = new Supplier<Node>()
