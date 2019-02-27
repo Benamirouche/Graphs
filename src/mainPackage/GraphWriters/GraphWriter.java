@@ -8,8 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public abstract class GraphWriter {
-    protected static final String BASE_PATH="C:"+File.separator+"Users"+File.separator+
-                                            "benam"+File.separator+"Desktop"+File.separator+
+    protected static final String BASE_PATH=".."+File.separator+
                                             "ProjectFiles"+ File.separator;
 
     protected static final String GRAPHS_PATH=BASE_PATH+"graphs"+File.separator;
