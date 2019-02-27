@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cfec193-5a59-4b80-ac6c-556dbdc184df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/mainPackage/generators/JgraphTBarabasiAlbertGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mainPackage/generators/JgraphTKleinbergSmallWorldGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mainPackage/generators/JgraphTScaleFreeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainPackage/GraphWriters/GexfGraphWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPackage/generators/JgraphTGenerators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPackage/generators/JgraphTGenerators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPackage/GraphWriters/GraphWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPackage/GraphWriters/GraphWriter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/BaseGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1950">
-              <caret line="2" selection-start-line="2" selection-end-line="6" />
+            <state relative-caret-position="-10">
+              <caret line="348" column="37" lean-forward="true" selection-start-line="348" selection-start-column="37" selection-end-line="348" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,10 +49,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mainPackage/GraphWriters/GraphWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+            <state relative-caret-position="510">
+              <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/mainPackage/GraphWriters/GexfGraphWriter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#239#240#0" expanded="true" />
+                <element signature="e#270#271#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/JgraphTBarabasiAlbertGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -186,11 +198,12 @@
         <option value="$PROJECT_DIR$/src/mainPackage/generators/BarabasiGenerator.java" />
         <option value="$PROJECT_DIR$/src/mainPackage/generators/BaseGenerator.java" />
         <option value="$PROJECT_DIR$/src/mainPackage/generators/RandomGraphGenerator.java" />
-        <option value="$PROJECT_DIR$/src/mainPackage/GraphWriters/GraphWriter.java" />
         <option value="$PROJECT_DIR$/src/mainPackage/generators/JgraphTKleinbergSmallWorldGenerator.java" />
         <option value="$PROJECT_DIR$/src/mainPackage/generators/JgraphTScaleFreeGenerator.java" />
         <option value="$PROJECT_DIR$/src/mainPackage/generators/JgraphTGenerators.java" />
         <option value="$PROJECT_DIR$/src/mainPackage/generators/JgraphTBarabasiAlbertGenerator.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/GraphWriters/GraphWriter.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/GraphWriters/GexfGraphWriter.java" />
       </list>
     </option>
   </component>
@@ -233,6 +246,13 @@
             </path>
             <path>
               <item name="Graphs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Graphs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="mainPackage" type="462c0819:PsiDirectoryNode" />
+              <item name="GraphWriters" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Graphs" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -246,7 +266,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551278037858" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551282759315" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="last_opened_file_path" value="$USER_HOME$/Téléchargements/jgrapht-1.3.0/lib/jheaps-0.9.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -423,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1551275791079</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add of all JgraphT Generators">
+      <created>1551278155528</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1551278155528</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -438,7 +465,7 @@
     <frame x="78" y="-11" width="1843" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18718663" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18718663" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -514,7 +541,8 @@
     <MESSAGE value="Adding Graph writer -careful with the basePath of the output files-" />
     <MESSAGE value="trying to organize the writing on the output files" />
     <MESSAGE value="add of JgraphTGenerators Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="add of JgraphTGenerators Class" />
+    <MESSAGE value="add of all JgraphT Generators" />
+    <option name="LAST_COMMIT_MESSAGE" value="add of all JgraphT Generators" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/mainPackage/Cluster.java" />
@@ -685,48 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/BaseGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1950">
-          <caret line="2" selection-start-line="2" selection-end-line="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mainPackage/GraphWriters/GraphWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/RmatGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="56" column="6" selection-start-line="56" selection-start-column="6" selection-end-line="56" selection-end-column="6" />
-          <folding>
-            <element signature="docComment;class#RmatGenerator#0" />
-            <element signature="docComment;field#a#0;class#RmatGenerator#0" />
-            <element signature="docComment;field#b#0;class#RmatGenerator#0" />
-            <element signature="docComment;field#d#0;class#RmatGenerator#0" />
-            <element signature="docComment;field#k#0;class#RmatGenerator#0" />
-            <element signature="docComment;method#generateRandomEdge#0;class#RmatGenerator#0" />
-            <element signature="method#generateRandomEdge#0;class#RmatGenerator#0" />
-            <element signature="e#2315#2624#1" />
-            <element signature="e#2376#2612#0" />
-            <element signature="docComment;method#generateQuadrant#0;class#RmatGenerator#0" />
-            <element signature="method#generateQuadrant#0;class#RmatGenerator#0" />
-            <element signature="docComment;method#generate#0;class#RmatGenerator#0" />
-            <element signature="e#3911#3978#1" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/JgraphTKleinbergSmallWorldGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -762,9 +748,63 @@
     <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/JgraphTBarabasiAlbertGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/GraphWriters/GraphWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/BaseGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="348" column="37" lean-forward="true" selection-start-line="348" selection-start-column="37" selection-end-line="348" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/RmatGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="56" column="6" selection-start-line="56" selection-start-column="6" selection-end-line="56" selection-end-column="6" />
+          <folding>
+            <element signature="docComment;class#RmatGenerator#0" />
+            <element signature="docComment;field#a#0;class#RmatGenerator#0" />
+            <element signature="docComment;field#b#0;class#RmatGenerator#0" />
+            <element signature="docComment;field#d#0;class#RmatGenerator#0" />
+            <element signature="docComment;field#k#0;class#RmatGenerator#0" />
+            <element signature="docComment;method#generateRandomEdge#0;class#RmatGenerator#0" />
+            <element signature="method#generateRandomEdge#0;class#RmatGenerator#0" />
+            <element signature="e#2315#2624#1" />
+            <element signature="e#2376#2612#0" />
+            <element signature="docComment;method#generateQuadrant#0;class#RmatGenerator#0" />
+            <element signature="method#generateQuadrant#0;class#RmatGenerator#0" />
+            <element signature="docComment;method#generate#0;class#RmatGenerator#0" />
+            <element signature="e#3911#3978#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/GraphWriters/GexfGraphWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#239#240#0" expanded="true" />
+            <element signature="e#270#271#0" expanded="true" />
           </folding>
         </state>
       </provider>

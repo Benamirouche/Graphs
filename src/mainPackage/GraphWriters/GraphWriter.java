@@ -23,8 +23,8 @@ public abstract class GraphWriter {
         this.graphGenerator=graphGenerator;
     }
 
-    public void openFile() throws IOException {
-        fw = new FileWriter(GRAPHS_PATH+"edgesN.graph");
+    public void openFile(String name) throws IOException {
+        fw = new FileWriter(GRAPHS_PATH+name);
         bw=new BufferedWriter(fw);
     }
 
