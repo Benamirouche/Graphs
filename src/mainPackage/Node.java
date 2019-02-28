@@ -1,5 +1,8 @@
 package mainPackage;
 
+import java.io.BufferedWriter;
+import java.io.IOException;
+
 /**
  * <h1>Node est la classe qui représente un noeud</h1>
  * <p>
@@ -129,6 +132,25 @@ public class Node  {
 	public String toString()
 	{
 		return "node num: "+this.getNum();
+	}
+
+
+	public  void writeGexf(BufferedWriter bw) throws IOException {
+
+
+
+		bw.write("\t\t\t<node id=\""+num+"\" label=\""+"node "+num+"\">\n");
+		bw.write("\t\t\t\t<attvalues>\n");
+//<<<<<<< HEAD:src/mainPackage/generators/BaseGenerator.java
+		bw.write("\t\t\t\t\t<attvalue for=\"0\" value=\""+idea.getName()+"\"/>\n");
+//=======
+		bw.write("\t\t\t\t\t<attvalue for=\"0\" value=\""+idea.getName()+"\"/>\n");
+//>>>>>>> origin/master:src/mainPackage/generators/BaseGenerator.java
+		bw.write("\t\t\t\t</attvalues>\n");
+
+		bw.write("\t\t\t</node>\n\n");
+
+
 	}
 
 }

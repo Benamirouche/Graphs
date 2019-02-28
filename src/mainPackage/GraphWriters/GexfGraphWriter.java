@@ -72,16 +72,7 @@ public class GexfGraphWriter extends GraphWriter {
        {
 
 
-           bw.write("\t\t\t<node id=\""+node.getNum()+"\" label=\""+"node "+node.getNum()+"\">\n");
-           bw.write("\t\t\t\t<attvalues>\n");
-//<<<<<<< HEAD:src/mainPackage/generators/BaseGenerator.java
-           bw.write("\t\t\t\t\t<attvalue for=\"0\" value=\""+node.getIdea().getName()+"\"/>\n");
-//=======
-           bw.write("\t\t\t\t\t<attvalue for=\"0\" value=\""+node.getIdea().getName()+"\"/>\n");
-//>>>>>>> origin/master:src/mainPackage/generators/BaseGenerator.java
-           bw.write("\t\t\t\t</attvalues>\n");
-
-           bw.write("\t\t\t</node>\n\n");
+          node.writeGexf(bw);
        }
 
        bw.write("\t\t</nodes>\n\n\n");
@@ -94,7 +85,7 @@ public class GexfGraphWriter extends GraphWriter {
 
 
         for(int i=0;i<edges.size();i++)
-            bw.write("<edge id=\""+i+"\" source=\""+edges.get(i).getNodeSrc().getNum()+"\" target=\""+edges.get(i).getNodeDest().getNum()+"\" weight=\""+edges.get(i).getWeight()+"\"/>\n");
+            edges.get(i).writeGexf(bw,i);
 
         bw.write("\t\t</edges>\n\n\n");
 

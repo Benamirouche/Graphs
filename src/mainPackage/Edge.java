@@ -1,6 +1,9 @@
 package mainPackage;
 
 
+import java.io.BufferedWriter;
+import java.io.IOException;
+
 /**
  * <h1>Edge est la classe qui représente un lien entre deux noeuds</h1>
  * <p>Cette classe représente un lien entre deux noeuds,
@@ -138,6 +141,10 @@ public class Edge {
 		return eother.nodeDest.getNum()==this.nodeDest.getNum() && eother.nodeSrc.getNum()==this.nodeSrc.getNum();
 	}
 
+	public void writeGexf(BufferedWriter bw,int index) throws IOException {
 
+		bw.write("<edge id=\""+index+"\" source=\""+nodeSrc.getNum()+"\" target=\""+nodeDest.getNum()+"\" weight=\""+weight+"\"/>\n");
+
+	}
 
 }
