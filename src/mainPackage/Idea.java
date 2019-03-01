@@ -7,6 +7,7 @@ package mainPackage;
 public class Idea {
 
   private String name;
+  private float index;
 
   private float value;
 
@@ -14,6 +15,24 @@ public class Idea {
 {
   this.name=name;	
 }
+
+  public Idea(String name, float index)
+  {
+    this.index=index;
+    this.name=name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public float getIndex() {
+    return index;
+  }
+
+  public void setIndex(float index) {
+    this.index = index;
+  }
 
   public String getName() {
     return name;

@@ -2,6 +2,7 @@ package mainPackage;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
+import java.util.Random;
 
 /**
  * <h1>Node est la classe qui représente un noeud</h1>
@@ -13,6 +14,11 @@ import java.io.IOException;
  * </p>
  */
 public class Node  {
+
+
+
+
+
 	/**
 	 * l'idée adopté
 	 */
@@ -35,7 +41,7 @@ public class Node  {
 	/**
 	 * le degree d'incertitude
 	 */
- 	private float uncertenty;
+ 	private float uncertainty;
 	// TODO : degre d'insertitude 0~1 getRandomUncertenty
 
 
@@ -48,6 +54,7 @@ public class Node  {
  	public Node(Idea idea,int num){
 	 this.idea=idea;
 	 this.num=num;
+	 this.uncertainty=new Random().nextFloat();
  	}
 
 	/**
@@ -79,6 +86,14 @@ public class Node  {
 	public int getInDegree() {return inDegree;}
 
 	/**
+	 * retourne le degré d'insertitude de ce noeud
+	 * @return le degré d'insertitude de ce noeud
+	 */
+	public float getUncertainty() {
+		return uncertainty;
+	}
+
+	/**
 	 * retourne le degré sortant du noeud
 	 * @return le degré sortant du noeud
 	 */
@@ -86,12 +101,8 @@ public class Node  {
 		return outDegree;
 	}
 
-	/**
-	 * retourne le degré d'insertitude de ce noeud
-	 * @return le degré d'insertitude de ce noeud
-	 */
-	public float getUncertenty() {
-		return uncertenty;
+	public void setUncertainty(float uncertainty) {
+		this.uncertainty = uncertainty;
 	}
 
 
