@@ -2,6 +2,9 @@ package mainPackage.generators;
 
 import mainPackage.Edge;
 import mainPackage.GraphDrawer;
+import mainPackage.GraphWriters.GexfGraphWriter;
+import mainPackage.GraphWriters.IdeasGraphWriter;
+import mainPackage.GraphWriters.StructeredGraphWriter;
 import mainPackage.Idea;
 import mainPackage.Node;
 
@@ -280,290 +283,22 @@ public abstract class BaseGenerator {
     anis changes**/
 		
     public void saveEdgesGEXF() {
-		BufferedWriter bw = null;
-		FileWriter fw = null;
-		try {
-			fw = new FileWriter(GRAPHS_PATH+"graph.gexf");
-			bw = new BufferedWriter(fw);
-			bw.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
-			bw.write("<gexf xmlns=\"http://www.gexf.net/1.2draft\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd\" version=\"1.2\">\n");
-			bw.write("\n \n");
-			bw.write("\t<meta lastmodifieddate=\""+new Date().toString()+"\">\n");
-			bw.write("\t <creator>Anis</creator>\n");
-			bw.write("\t <description>Social Network Graph</description>\n");
-			bw.write("\t</meta>/n\n");
-			bw.write("\t<graph defaultedgetype=\"directed\">\n");
-			bw.write("\t\t<attributes class=\"node\">\n");
-			//bw.write("\t\t\t<attribute id=\"0\" title=\"name\" type=\"string\"/>");
-			
-			bw.write("\t\t\t<attribute id=\"0\" title=\"idea\" type=\"string\"/>\n");
-			bw.write("\t\t</attributes>\n\n");
-			bw.write("\t\t<nodes>\n");
-			
-			for(Node node:nodes.values())
-			{
-				
-				
-				bw.write("\t\t\t<node id=\""+node.getNum()+"\" label=\""+"node "+node.getNum()+"\">\n");
-				bw.write("\t\t\t\t<attvalues>\n");
-//<<<<<<< HEAD:src/mainPackage/generators/BaseGenerator.java
-     			bw.write("\t\t\t\t\t<attvalue for=\"0\" value=\""+node.getIdea().getName()+"\"/>\n");
-//=======
-     			bw.write("\t\t\t\t\t<attvalue for=\"0\" value=\""+node.getIdea().getName()+"\"/>\n");	
-//>>>>>>> origin/master:src/mainPackage/generators/BaseGenerator.java
-     			bw.write("\t\t\t\t</attvalues>\n");
-     		
-     			bw.write("\t\t\t</node>\n\n");
-			}
-			
-			bw.write("\t\t</nodes>\n\n\n");
-			
-			
-			
-			
-			bw.write("\t\t<edges>\n");
-			
-			
-			for(int i=0;i<edges.size();i++)
-			bw.write("<edge id=\""+i+"\" source=\""+edges.get(i).getNodeSrc().getNum()+"\" target=\""+edges.get(i).getNodeDest().getNum()+"\" weight=\""+edges.get(i).getWeight()+"\"/>\n");
-			
-			bw.write("\t\t</edges>\n\n\n");
-			
-			
-			
-			bw.write("\t </graph>\n");
-			bw.write("</gexf>\n");
-						
-			
-			
-			System.out.println("Done");
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				if (bw != null)
-					bw.close();
-				if (fw != null)
-					fw.close();
-			} catch (IOException ex) {
-				ex.printStackTrace();
-			}
-		}
+		new GexfGraphWriter(this).write();
 	}
 
-	public Map<Node,List<Node>> getOrganizedFollowersList() {
-		return edges.stream()
-				.collect(Collectors.groupingBy
-							(Edge::getNodeDest,
-							 Collectors.mapping(Edge::getNodeSrc, Collectors.toList()))
-						);
-	}
-	public Set<Node> getNonFollowedNodes(Map<Node,List<Node>> organizedList){
-		return nodes.values()
-				.stream()
-				.filter((n)->!organizedList.containsKey(n))
-				.collect(Collectors.toSet());
-	}
 
-	public Map<Node,List<Node>> getOrganizedFollowingList(){
-		return edges.stream()
-				.collect(Collectors.groupingBy(Edge::getNodeSrc,
-												Collectors.mapping(Edge::getNodeDest, Collectors.toList()))
-						);
-	}
-	public Set<Node> getNonFollowingNodes(Map<Node,List<Node>> organizedList){
-			return nodes.values().stream().filter((n)->!organizedList.containsKey(n)).collect(Collectors.toSet());
-	}
+
 
    	public void getNodesNeighbours() {
-		Map<Node,List<Node>> followersList=getOrganizedFollowersList();
-		Set<Node> nonFollowedNodes=getNonFollowedNodes(followersList);
-		nonFollowedNodes.forEach(node->followersList.put(node,new ArrayList<Node>()));
-
-		Map <Node,List<Node>> followingList=getOrganizedFollowingList();
-		Set<Node> nonFollowingNodes=getNonFollowingNodes(followersList);
-		nonFollowingNodes.forEach(node->followingList.put(node,new ArrayList<Node>()));
-
-	    BufferedWriter bw = null ;
-		FileWriter fw = null;
-		try {
-			fw = new FileWriter(GRAPHS_PATH+"edgesN.graph");
-			bw=new BufferedWriter(fw);
-			final BufferedWriter bw2=bw;
-			
-		   followersList.forEach((nSrc,listNeighbours)->
-		  
-		   {String line="";
-		     line+="n"+nSrc.getNum()+" "+"[";
-		     line+="{"+nSrc.getIdea().getName()+","+ideas.indexOf(nSrc.getIdea())*0.1+","+new Random().nextFloat()+","+listNeighbours.size()+"}"+",{";
-		     for(int i=0;i<listNeighbours.size()-1;i++)
-		     {
-		    	 line+="n"+listNeighbours.get(i).getNum()+",";
-		     }
-			   line+="n"+listNeighbours.get(listNeighbours.size()-1).getNum()+"}]\n";
-			   try {
-					bw2.write(line);
-					System.out.println(line);
-				    } catch (IOException e) {
-					e.printStackTrace();
-				   }
-			 
-		   }
-			
-				    );
-		   nonFollowedNodes.forEach(n->{
-			   
-
-			 
-			    String  line="n"+n.getNum()+" "+"["+"{"+n.getIdea().getName()+","+ideas.indexOf(n.getIdea())*0.1+","+new Random().nextFloat()+","+0+"}"+"]\n";
-			     try {
-					bw2.write(line);
-					System.out.println(line);
-					
-				    } catch (IOException e) {
-			     	e.printStackTrace();
-				   }
-			   
-		   });
-		   
-		   
-			System.out.println("Done");
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				if (bw != null)
-					bw.close();
-				if (fw != null)
-					fw.close();
-			} catch (IOException ex) {
-				ex.printStackTrace();
-			}
-		}
+		new StructeredGraphWriter(this).write();
 
 	}
-	public void saveFollowingNodes() {
-		Map <Node,List<Node>> organizedList=edges.stream()
-		
-				.collect(Collectors.groupingBy(Edge::getNodeSrc,
-						                       Collectors.mapping(Edge::getNodeDest, Collectors.toList()))
-						);
-				
-		Set<Node> nonFollowingNodes=nodes.values()
-									.stream()
-									.filter((n)->!organizedList.containsKey(n))
-									.collect(Collectors.toSet());
-				
-	    BufferedWriter bw = null ;
-		FileWriter fw = null;
-		try {
-			fw = new FileWriter("followingLists.txt");
-			bw=new BufferedWriter(fw);
-			final BufferedWriter bw2=bw;
-			
-		   organizedList.forEach((nSrc,listNeighbours)->
-		  
-		   {String line="";
-			   
-		     line+="n"+nSrc.getNum()+" "+"[";
-			
-		     
-		     line+="{"+nSrc.getIdea().getName()+","+ideas.indexOf(nSrc.getIdea())*0.1+","+new Random().nextFloat()+","+listNeighbours.size()+"}"+",{";
-		     
-		     for(int i=0;i<listNeighbours.size()-1;i++)
-		     {
-		    	 line+="n"+listNeighbours.get(i).getNum()+",";
-		    	 
-		    	 
-		     }
-		     
-			   line+="n"+listNeighbours.get(listNeighbours.size()-1).getNum()+"}]\n";
-			   
-			   try {
-				   
-					bw2.write(line);
-					System.out.println(line);
-					
-				    } catch (IOException e) {
-					e.printStackTrace();
-				   }
-			 
-		   }
-			
-				    );
-		   nonFollowingNodes.forEach(n->{
-			   
 
-			 
-			    String  line="n"+n.getNum()+" "+"["+"{"+n.getIdea().getName()+","+ideas.indexOf(n.getIdea())*0.1+","+new Random().nextFloat()+","+0+"}"+"]\n";
-			     try {
-					bw2.write(line);
-					System.out.println(line);
-					
-				    } catch (IOException e) {
-					e.printStackTrace();
-				   }
-			   
-		   });
-		   
-		   
-		   
-		   
-		
-			
-			
 
-			System.out.println("Done");
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				if (bw != null)
-					bw.close();
-				if (fw != null)
-					fw.close();
-			} catch (IOException ex) {
-				ex.printStackTrace();
-			}
-		}
 
-	}
 	public void saveIdeasApparition() {
-	Map<String,Long> flatedNodes=nodes.entrySet().stream().map(v->v.getValue().getIdea()).collect(Collectors.groupingBy(Idea::getName,Collectors.counting()));
-	
-	
-	   BufferedWriter bw = null  ;
-	   FileWriter fw = null;
-	
-	   	try {
-			fw=new FileWriter(GRAPHS_PATH+"ideas.txt");
-			 bw=new BufferedWriter(fw);
-			 
-			 BufferedWriter bw2=bw;
-			 flatedNodes.forEach((idea,nombreApparition)->{
-					try {
-						bw2.write(idea+":"+nombreApparition+"\n");
-					} catch (IOException e) {
-						
-						e.printStackTrace();
-					}
-				   
-			 });
-			 
-		} catch (IOException e1) {
-		
-			e1.printStackTrace();
-		}
-	   	finally {
-	   		try {
-	   			if (bw != null)
-	   				bw.close();
-	   			if (fw != null)
-	   				fw.close();
-	   			} catch (IOException ex) {
-	   					ex.printStackTrace();
-	   			}
-}
+	  new IdeasGraphWriter(this).write();
+	}
 	  
 	   
 	   
@@ -589,4 +324,4 @@ public abstract class BaseGenerator {
     
     
     
-}
+
