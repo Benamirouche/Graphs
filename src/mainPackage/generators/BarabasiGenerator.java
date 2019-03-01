@@ -39,6 +39,10 @@ public class BarabasiGenerator extends BaseGenerator {
      */
     private int k;
 
+    //TODO: comments
+    private float randomDensity=-1f;
+
+
     /**
      * <p>
      *     Le seul constructeur de la classe qui prend en parametre:
@@ -55,6 +59,32 @@ public class BarabasiGenerator extends BaseGenerator {
         this.k=k;
         setIdeaValues();// for Anass: associate every idea to a float between -.1 and +.1
     }
+
+
+
+    /**
+     * <p>
+     *     Le seul constructeur de la classe qui prend en parametre:
+     * </p>
+     * @param randomRatio Le pourcentage du graphe utilisé comme graphe initial.
+     * @param ideas La liste des idées possible dans le graphe.
+     * @param finalNbrNodes Le nombre total de noeuds du graphe resultant.
+     * @param k Un paramètre pour controller la densité du graphe.
+     */
+    public BarabasiGenerator(float randomRatio,List<Idea> ideas,int finalNbrNodes ,int k,float randomDensity){
+        this.ideas=ideas;
+        this.randomRatio=randomRatio;
+        this.finalNbrNodes=finalNbrNodes;
+        this.k=k;
+        this.randomDensity=randomDensity;
+        setIdeaValues();// for Anass: associate every idea to a float between -.1 and +.1
+    }
+
+
+
+
+
+
 
     /**
      * <p>
@@ -163,5 +193,20 @@ public class BarabasiGenerator extends BaseGenerator {
      */
     public int getFinalNbrNodes() {
         return finalNbrNodes;
+    }
+
+
+    // TODO: comment this
+
+
+    @Override
+    public void generate() {
+
+        //TODO: modify this
+//        try {
+//            //randomDensity==-1f?generateWithoutSeed():generateWithSeed(randomDensity);
+//        } catch (WrongParametersException e) {
+//            e.printStackTrace();
+//        }
     }
 }

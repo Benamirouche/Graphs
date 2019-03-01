@@ -95,4 +95,10 @@ public class RandomGraphGenerator extends BaseGenerator{
             System.out.println(n.getInDegree());
         }
     }
+
+//TODO
+    @Override
+    public void generate() {
+
+    }
 }

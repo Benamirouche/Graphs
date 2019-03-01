@@ -64,6 +64,19 @@ public abstract class BaseGenerator {
      */
     protected Map<Integer, Node> nodes = new TreeMap<>();
 
+
+    //TODO: comment this
+
+    abstract public void generate();
+
+
+
+
+
+
+
+
+
     /**
      * initialise les noeuds
      * cette methode instancie tout les noeuds et attribut a chaque noeud un idée aléatoire
