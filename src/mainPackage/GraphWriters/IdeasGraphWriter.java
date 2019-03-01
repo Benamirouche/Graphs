@@ -8,14 +8,14 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class IdeasGraphWriter extends GraphWriter{
-  public static final String FILE_PATH="ideas.txt";
+  private static final String FILE_PATH="ideas.txt";
 
     public IdeasGraphWriter(BaseGenerator generator){
 
         super(generator);
 
     }
-    public Map<String,Long> getOrganizedIdeas(){
+    private Map<String,Long> getOrganizedIdeas(){
         return graphGenerator.getNodes().entrySet().stream().map(v->v.getValue().getIdea()).collect(Collectors.groupingBy(Idea::getName,Collectors.counting()));
 
     }

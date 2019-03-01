@@ -7,10 +7,9 @@ import mainPackage.generators.BaseGenerator;
 import java.io.IOException;
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 public class GexfGraphWriter extends GraphWriter {
-    public static final String FILE_PATH="graph.gexf";
+    private static final String FILE_PATH="graph.gexf";
 
     public GexfGraphWriter(BaseGenerator generator){
         super(generator);
@@ -23,9 +22,9 @@ public class GexfGraphWriter extends GraphWriter {
 
             writeHead();
 
-            writeNodes(graphGenerator.getNodes());
+            writeNodes();
 
-            writeEdges(graphGenerator.getEdges());
+            writeEdges();
 
             writeCloseTags();
 
@@ -48,7 +47,7 @@ public class GexfGraphWriter extends GraphWriter {
 
     }
 
-    public void writeHead() throws IOException {
+    private void writeHead() throws IOException {
         bw.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
         bw.write("<gexf xmlns=\"http://www.gexf.net/1.2draft\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd\" version=\"1.2\">\n");
         bw.write("\n \n");
@@ -65,7 +64,7 @@ public class GexfGraphWriter extends GraphWriter {
 
     }
 
-   public void writeNodes(Map<Integer,Node> nodes) throws IOException {
+   private void writeNodes() throws IOException {
        bw.write("\t\t<nodes>\n");
 
        for(Node node:graphGenerator.getNodes().values())
@@ -79,8 +78,8 @@ public class GexfGraphWriter extends GraphWriter {
 
 
    }
-    public void writeEdges(List<Edge> edges) throws IOException {
-
+    private void writeEdges() throws IOException {
+        List<Edge> edges=graphGenerator.getEdges();
         bw.write("\t\t<edges>\n");
 
 
@@ -92,7 +91,7 @@ public class GexfGraphWriter extends GraphWriter {
 
     }
 
-    public  void writeCloseTags() throws IOException {
+    private  void writeCloseTags() throws IOException {
 
         bw.write("\t </graph>\n");
         bw.write("</gexf>\n");

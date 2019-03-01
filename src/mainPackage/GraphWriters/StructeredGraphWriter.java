@@ -12,7 +12,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class StructeredGraphWriter extends GraphWriter {
-    public static final String FILE_PATH="edgesN.graph";
+    private static final String FILE_PATH="edgesN.graph";
 
     public StructeredGraphWriter(BaseGenerator generator){
 
@@ -20,24 +20,24 @@ public class StructeredGraphWriter extends GraphWriter {
 
     }
 
-    public Map<Node,List<Node>> getOrganizedFollowingList(){
+   private Map<Node,List<Node>> getOrganizedFollowingList(){
         return graphGenerator.getEdges().stream()
                 .collect(Collectors.groupingBy(Edge::getNodeSrc,
                         Collectors.mapping(Edge::getNodeDest, Collectors.toList()))
                 );
     }
-    public Set<Node> getNonFollowingNodes(Map<Node,List<Node>> organizedList){
+    private Set<Node> getNonFollowingNodes(Map<Node,List<Node>> organizedList){
         return graphGenerator.getNodes().values().stream().filter((n)->!organizedList.containsKey(n)).collect(Collectors.toSet());
     }
 
-    public Set<Node> getNonFollowedNodes(Map<Node,List<Node>> organizedList){
+    private Set<Node> getNonFollowedNodes(Map<Node,List<Node>> organizedList){
         return graphGenerator.getNodes().values()
                 .stream()
                 .filter((n)->!organizedList.containsKey(n))
                 .collect(Collectors.toSet());
     }
 
-    public Map<Node,List<Node>> getOrganizedFollowersList()
+    private Map<Node,List<Node>> getOrganizedFollowersList()
     {
         Map<Node, List<Node>> followersList= graphGenerator.getEdges().stream()
                                                                       .collect(Collectors.groupingBy
@@ -50,7 +50,7 @@ public class StructeredGraphWriter extends GraphWriter {
         return followersList;
 
     }
-    public String writeNodeCharacteristics(Node nSrc, int nbrFollowers)
+    private String writeNodeCharacteristics(Node nSrc, int nbrFollowers)
     {
         String line="";
         line+="n"+nSrc.getNum()+" ";
@@ -66,7 +66,7 @@ public class StructeredGraphWriter extends GraphWriter {
         return line;
     }
 
-    public String writeNodeFollowersList(List<Node> listFollowers)
+    private String writeNodeFollowersList(List<Node> listFollowers)
     {
 
        String line="";
@@ -93,7 +93,7 @@ public class StructeredGraphWriter extends GraphWriter {
 
 
 
-    public void writeNode(Node nSrc,List<Node> listFollowers){
+    private void writeNode(Node nSrc,List<Node> listFollowers){
         String line="";
         int nbrFollowers=listFollowers.size();
 
@@ -115,7 +115,7 @@ public class StructeredGraphWriter extends GraphWriter {
 
     }
 
-    public void writeNodes(){
+    private void writeNodes(){
         Map<Node, List<Node>> followersLists=getOrganizedFollowersList();
 
 

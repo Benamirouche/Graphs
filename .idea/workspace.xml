@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2cfec193-5a59-4b80-ac6c-556dbdc184df" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPackage/GraphWriters/GexfGraphWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPackage/GraphWriters/GexfGraphWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPackage/GraphWriters/IdeasGraphWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPackage/GraphWriters/IdeasGraphWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mainPackage/GraphWriters/StructeredGraphWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPackage/GraphWriters/StructeredGraphWriter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -27,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/BaseGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5490">
-              <caret line="393" column="14" selection-start-line="391" selection-start-column="12" selection-end-line="393" selection-end-column="14" />
+            <state relative-caret-position="501">
+              <caret line="572" column="7" lean-forward="true" selection-start-line="531" selection-start-column="4" selection-end-line="572" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,20 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/RandomGraphGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="-340">
               <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mainPackage/GraphWriters/GraphWriter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="38" column="15" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mainPackage/GraphWriters/GexfGraphWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="44" column="9" selection-start-line="20" selection-start-column="7" selection-end-line="44" selection-end-column="9" />
+            <state relative-caret-position="591">
+              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,11 +74,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mainPackage/GraphWriters/StructeredGraphWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+            <state relative-caret-position="331">
+              <caret line="79" column="9" lean-forward="true" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mainPackage/GraphWriters/IdeasGraphWriter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -262,11 +264,12 @@
         <option value="$PROJECT_DIR$/src/mainPackage/generators/JgraphTBarabasiAlbertGenerator.java" />
         <option value="$PROJECT_DIR$/src/mainPackage/GraphWriters/GraphWriter.java" />
         <option value="$PROJECT_DIR$/src/mainPackage/Edge.java" />
-        <option value="$PROJECT_DIR$/src/mainPackage/GraphWriters/GexfGraphWriter.java" />
         <option value="$PROJECT_DIR$/src/mainPackage/generators/BaseGenerator.java" />
         <option value="$PROJECT_DIR$/src/mainPackage/Idea.java" />
         <option value="$PROJECT_DIR$/src/mainPackage/Node.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/GraphWriters/IdeasGraphWriter.java" />
         <option value="$PROJECT_DIR$/src/mainPackage/GraphWriters/StructeredGraphWriter.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/GraphWriters/GexfGraphWriter.java" />
       </list>
     </option>
   </component>
@@ -527,7 +530,21 @@
       <option name="project" value="LOCAL" />
       <updated>1551362109132</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="modification of StructuredGraphWriter">
+      <created>1551457745890</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1551457745890</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Add of IdeasGraphWriter">
+      <created>1551459752754</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1551459752754</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -542,7 +559,7 @@
     <frame x="78" y="-11" width="1843" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18941504" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18941504" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -588,7 +605,9 @@
     <MESSAGE value="add of all JgraphT Generators" />
     <MESSAGE value="add of GEXFWriter" />
     <MESSAGE value="add to GEXFWriter" />
-    <option name="LAST_COMMIT_MESSAGE" value="add to GEXFWriter" />
+    <MESSAGE value="modification of StructuredGraphWriter" />
+    <MESSAGE value="Add of IdeasGraphWriter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add of IdeasGraphWriter" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -732,26 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/BaseGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5490">
-          <caret line="393" column="14" selection-start-line="391" selection-start-column="12" selection-end-line="393" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/RandomGraphGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mainPackage/GraphWriters/GraphWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -766,16 +765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1185">
           <caret line="87" selection-start-line="87" selection-end-line="87" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mainPackage/GraphWriters/GexfGraphWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="44" column="9" selection-start-line="20" selection-start-column="7" selection-end-line="44" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -853,10 +842,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/RandomGraphGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-340">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/BaseGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="572" column="7" lean-forward="true" selection-start-line="531" selection-start-column="4" selection-end-line="572" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/GraphWriters/IdeasGraphWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/mainPackage/GraphWriters/StructeredGraphWriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+        <state relative-caret-position="331">
+          <caret line="79" column="9" lean-forward="true" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/GraphWriters/GexfGraphWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
