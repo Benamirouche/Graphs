@@ -128,10 +128,6 @@ public class StructeredGraphWriter extends GraphWriter {
 
     public void write(){
 
-
-
-
-
         try {
             openFile(FILE_PATH);
 
@@ -159,5 +155,8 @@ public class StructeredGraphWriter extends GraphWriter {
 
 
 }
+
+
+
 
 }
