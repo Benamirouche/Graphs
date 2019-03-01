@@ -50,9 +50,9 @@ public class StructeredGraphWriter extends GraphWriter {
         return followersList;
 
     }
-    public void writeNodeCharacteristics(String line, Node nSrc, int nbrFollowers)
+    public String writeNodeCharacteristics(Node nSrc, int nbrFollowers)
     {
-
+        String line="";
         line+="n"+nSrc.getNum()+" ";
         line+="[";
         line+="{";
@@ -63,12 +63,14 @@ public class StructeredGraphWriter extends GraphWriter {
         line+=nSrc.getUncertainty();
         line+=",";
         line+=nbrFollowers+"}";
+        return line;
     }
 
-    public void writeNodeFollowersList(String line,List<Node> listFollowers)
+    public String writeNodeFollowersList(List<Node> listFollowers)
     {
 
-        line+=",";
+       String line="";
+         line+=",";
         line+="{";
 
         for(int i=0;i<listFollowers.size()-1;i++)
@@ -80,7 +82,7 @@ public class StructeredGraphWriter extends GraphWriter {
         line+="n"+listFollowers.get(listFollowers.size()-1).getNum();
         line+="}";
 
-
+        return  line;
     }
 
 
@@ -96,9 +98,9 @@ public class StructeredGraphWriter extends GraphWriter {
         int nbrFollowers=listFollowers.size();
 
 
-        writeNodeCharacteristics(line,nSrc,nbrFollowers);
+        line+=writeNodeCharacteristics(nSrc,nbrFollowers);
         if(!listFollowers.isEmpty())
-        writeNodeFollowersList(line,listFollowers);
+        line+=writeNodeFollowersList(listFollowers);
 
 
         line+="]\n";
@@ -117,14 +119,7 @@ public class StructeredGraphWriter extends GraphWriter {
         Map<Node, List<Node>> followersLists=getOrganizedFollowersList();
 
 
-        followersLists.forEach((nSrc,listFollowers)->
-
-                {
-                    writeNode(nSrc,listFollowers);
-
-                }
-
-        );
+        followersLists.forEach((nSrc,listFollowers)-> writeNode(nSrc,listFollowers));
 
 
     }
