@@ -15,14 +15,14 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-public class JgraphTGenerators extends BaseGenerator {
+public  class JgraphTGenerators extends BaseGenerator {
 
     protected Graph<Node, DefaultEdge> graphGenerated;
     protected GraphGenerator<Node,DefaultEdge,Node> graphGenerator;
-    protected List<Idea>  ideas;
+
 
     protected  JgraphTGenerators(List<Idea> ideas,GraphGenerator<Node,DefaultEdge,Node> graphGenerator ){
-        this.ideas=ideas;
+       super(ideas);
         this.graphGenerator=graphGenerator;
         Supplier<Node> nodeSupplier = new Supplier<Node>()
         {
@@ -34,7 +34,28 @@ public class JgraphTGenerators extends BaseGenerator {
                 return new Node(getRandomIdea(),id++ );
             }
         };
-        this.ideas=ideas;
+
+
+
+        graphGenerated =  new SimpleDirectedGraph<Node,DefaultEdge>(nodeSupplier, SupplierUtil.createDefaultEdgeSupplier(),false);
+
+
+
+    }
+    protected  JgraphTGenerators(List<Idea> ideas,GraphGenerator<Node,DefaultEdge,Node> graphGenerator,int numberOfNodes ){
+        super(ideas,numberOfNodes);
+        this.graphGenerator=graphGenerator;
+        Supplier<Node> nodeSupplier = new Supplier<Node>()
+        {
+            private int id = 0;
+
+            @Override
+            public Node get()
+            {
+                return new Node(getRandomIdea(),id++ );
+            }
+        };
+
 
 
         graphGenerated =  new SimpleDirectedGraph<Node,DefaultEdge>(nodeSupplier, SupplierUtil.createDefaultEdgeSupplier(),false);

@@ -17,9 +17,11 @@ public class RandomGraphGenerator extends BaseGenerator{
      * @param nbrNodes le nombre de noeuds
      * @param ideas la liste des idées possible dans le graphe
      */
-    public RandomGraphGenerator(int nbrNodes, List<Idea> ideas) {
-        this.nbrNodes=nbrNodes;
-        this.ideas=ideas;
+
+    private float p;
+    public RandomGraphGenerator(int nbrNodes, List<Idea> ideas,float p) {
+        super(ideas,nbrNodes);
+        this.p=p;
         setIdeaValues();
         initGraph();
     }
@@ -41,16 +43,16 @@ public class RandomGraphGenerator extends BaseGenerator{
      *     Cette fonction est responsable de la generation du graphe
      * </p>
      * todo streams instead of for loops
-     * @param p
+     * //TODO
      */
-    public boolean generate(float p) {
+    public void generate() {
         for (int i = 1; i <= this.nbrNodes; i++) {
             for (int j = 1; j < this.nbrNodes; j++) {
                 generateOneEdge(getNode(i),getNode(j),p);
             }
         }
         edges=edges.stream().distinct().collect(Collectors.toList());
-        return connectedGraph();
+        //return connectedGraph();
     }
 
     /**
@@ -67,7 +69,7 @@ public class RandomGraphGenerator extends BaseGenerator{
         float r;
         Edge edge;
         r = random.nextFloat();
-        if(r<=p) {
+        if(r<p) {
             edge=new Edge(i,j,generateRandomWeight());
             edges.add(edge);
             this.nbrEdges++;
@@ -96,9 +98,4 @@ public class RandomGraphGenerator extends BaseGenerator{
         }
     }
 
-//TODO
-    @Override
-    public void generate() {
-
-    }
 }

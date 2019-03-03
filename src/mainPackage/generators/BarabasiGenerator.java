@@ -32,7 +32,7 @@ public class BarabasiGenerator extends BaseGenerator {
     /**
      * Le nombre de noeuds total du graphe qu'on va générer.
      */
-    private int finalNbrNodes;
+ //   private int finalNbrNodes;
 
     /**
      * 2*k represente (avec une petite marge d'erreur) le degrés moyen de chaque noeud du graphe.
@@ -53,9 +53,10 @@ public class BarabasiGenerator extends BaseGenerator {
      * @param k Un paramètre pour controller la densité du graphe.
      */
     public BarabasiGenerator(float randomRatio,List<Idea> ideas,int finalNbrNodes ,int k){
+        super(ideas,finalNbrNodes);
         this.ideas=ideas;
         this.randomRatio=randomRatio;
-        this.finalNbrNodes=finalNbrNodes;
+      //  this.finalNbrNodes=finalNbrNodes;
         this.k=k;
         setIdeaValues();// for Anass: associate every idea to a float between -.1 and +.1
     }
@@ -72,9 +73,10 @@ public class BarabasiGenerator extends BaseGenerator {
      * @param k Un paramètre pour controller la densité du graphe.
      */
     public BarabasiGenerator(float randomRatio,List<Idea> ideas,int finalNbrNodes ,int k,float randomDensity){
+        super(ideas,finalNbrNodes);
         this.ideas=ideas;
         this.randomRatio=randomRatio;
-        this.finalNbrNodes=finalNbrNodes;
+       // this.finalNbrNodes=finalNbrNodes;
         this.k=k;
         this.randomDensity=randomDensity;
         setIdeaValues();// for Anass: associate every idea to a float between -.1 and +.1
@@ -97,19 +99,19 @@ public class BarabasiGenerator extends BaseGenerator {
      * @param randomDensity Ce paramètre représente ldensité du graphe aléatoire initial
      */
     public void generateWithSeed(float randomDensity) throws WrongParametersException{
-        RandomGraphGenerator ranGen=new RandomGraphGenerator(Math.round(this.finalNbrNodes*this.randomRatio),this.ideas);
-        if(Math.round(this.finalNbrNodes*this.randomRatio)<3)
+        RandomGraphGenerator ranGen=new RandomGraphGenerator(Math.round(this.nbrNodes*this.randomRatio),this.ideas,randomDensity);
+        if(Math.round(this.nbrNodes*this.randomRatio)<3)
             throw new WrongParametersException("Random ratio too small to be used as seed, please try to increase it.");//exception :the seed is too small, can't be used to
         do {
-            ranGen.generate(randomDensity);
+            ranGen.generate();
         }while(!ranGen.connectedGraph());
-        this.nbrNodes= ranGen.getNbrNodes();//just to make sure we affect the nbrNodes of barabsiGenerator by nbrNodes of the randomGenerator
-        this.nbrEdges=ranGen.getNbrEdges();
+       // this.nbrNodes= ranGen.getNbrNodes();//just to make sure we affect the nbrNodes of barabsiGenerator by nbrNodes of the randomGenerator
+       // this.nbrEdges=ranGen.getNbrEdges();
         this.nodes.putAll(ranGen.getNodes());
         this.edges.addAll(ranGen.getEdges());
         Node node;
         int i=this.nbrNodes+1;
-        while (i<=this.finalNbrNodes) {
+        while (i<=this.nbrNodes) {
             node=new Node(getRandomIdea(),i);
             if(generateOneNode(i,node)){
                 i++;//generate one node increments automatically the number of nodes
@@ -131,9 +133,9 @@ public class BarabasiGenerator extends BaseGenerator {
         edge=new Edge(getNode(1),getNode(2),generateRandomWeight());
         this.edges.add(edge);
         saveNodesStatistics(edge);
-        this.nbrNodes=2;
+        //this.nbrNodes=2;
         int i=3;
-        while (i<=this.finalNbrNodes) {
+        while (i<=this.nbrNodes) {
             node=new Node(getRandomIdea(),i);
             if(generateOneNode(i,node)){
                 i++;//generate one node increments automatically the number of nodes
@@ -191,22 +193,41 @@ public class BarabasiGenerator extends BaseGenerator {
      * retourne le nombre de noeuds final qu'on espère atteindre
      * @return le nombre de noeuds final qu'on espère atteindre
      */
-    public int getFinalNbrNodes() {
-        return finalNbrNodes;
-    }
+//    public int getFinalNbrNodes() {
+//        return finalNbrNodes;
+//    }
 
 
-    // TODO: comment this
+    // TODO: comment all this
+
+public boolean isSeeded(){ return randomDensity!=-1f;}
+
+
+
+
 
 
     @Override
     public void generate() {
 
-        //TODO: modify this
-//        try {
-//            //randomDensity==-1f?generateWithoutSeed():generateWithSeed(randomDensity);
-//        } catch (WrongParametersException e) {
-//            e.printStackTrace();
-//        }
+
+        try {
+
+            if(isSeeded()) {
+                generateWithSeed(randomDensity);
+            }
+            else{
+
+                generateWithoutSeed();
+            }
+
+
+        } catch (WrongParametersException e) {
+            e.printStackTrace();
+        }
     }
+
+
+
+
 }

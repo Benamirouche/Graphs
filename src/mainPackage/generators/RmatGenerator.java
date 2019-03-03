@@ -1,10 +1,8 @@
 package mainPackage.generators;
 
-import Comparator.EdgeComparator;
 import mainPackage.Edge;
 import mainPackage.Idea;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -66,16 +64,17 @@ public class RmatGenerator extends BaseGenerator{
 	 *
 	 */
 	public RmatGenerator(int nbrNodes, int nbrEdges, float a, float b, float c, List<Idea> ideas) {
+		super(ideas,nbrNodes,nbrEdges);
+
 		this.k = Math.toIntExact(Math.round(Math.log(nbrNodes) / Math.log(2)));
 
-		this.nbrNodes = (int) Math.pow(2, k);
-		this.nbrEdges = nbrEdges;
+		super.nbrNodes=(int) Math.pow(2, k);
+
 		this.a = a;
 		this.b = b;
 		this.c = c;
 		this.d = 1 - (a + b + c);
-		this.ideas = ideas;
-		Collections.sort(edges, new EdgeComparator());
+
 		setIdeaValues();
 		initNodes();
 	}

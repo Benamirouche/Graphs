@@ -45,11 +45,20 @@ public abstract class BaseGenerator {
     /**
      * la liste des idées possibles dans le graphe
      */
-    protected List<Idea> ideas = new ArrayList<>();
+    protected List<Idea> ideas;
     /**
      * la liste de tout les liens du graphe
      */
-    protected List<Edge> edges = new ArrayList<>();
+    protected List<Edge> edges;
+    /**
+     * map qui attribut à chaque identificateur l'objet Node correspondant
+     */
+    protected Map<Integer, Node> nodes;
+
+
+    //TODO: MODIFY THIS
+
+
     /**
      * cet map prefAttachSorted est utilisé pour verifier la loi de disrtibution présenté dans le rapport
      * map qui attribut à chaque noeud une liste de tout les autres noeuds
@@ -59,10 +68,23 @@ public abstract class BaseGenerator {
      * @see Node
      */
     protected Map<Integer, List<Integer>> prefAttachSorted = new TreeMap<>();
-    /**
-     * map qui attribut à chaque identificateur l'objet Node correspondant
-     */
-    protected Map<Integer, Node> nodes = new TreeMap<>();
+
+//TODO: comment this constructors
+    protected BaseGenerator(List<Idea>ideas,int nbrNodes){
+        this.nodes = new TreeMap<>();
+        this.edges=new ArrayList<>();
+        this.ideas=ideas;
+        this.nbrNodes=nbrNodes;
+    }
+    protected BaseGenerator(List<Idea> ideas,int nbrNodes,int nbrEdges){
+        this(ideas,nbrNodes);
+        this.nbrEdges=nbrEdges;
+
+    }
+
+    public BaseGenerator(List<Idea> ideas) {
+        this.ideas=ideas;
+    }
 
 
     //TODO: comment this
