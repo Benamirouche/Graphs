@@ -17,4 +17,11 @@ public class JgraphTBarabasiAlbertGenerator extends JgraphTGenerators {
 
 
     }
+    public JgraphTBarabasiAlbertGenerator(List<Idea> ideas,int initialNumberOfNodes,int numberOfEdgesAddedPerNode,int finalNumberOfNodes,long seed){
+        super(ideas,new BarabasiAlbertGraphGenerator<Node, DefaultEdge>(initialNumberOfNodes,numberOfEdgesAddedPerNode,finalNumberOfNodes,seed),finalNumberOfNodes);
+
+
+
+
+    }
 }
