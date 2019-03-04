@@ -12,6 +12,15 @@ import java.io.File;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * <p>
+ *     La classe BaseGeneratoe est la classe mère de tous les générateur,
+ *     elle contient tous les attrbiuts et methodes communes entre les générateur.
+ *     Cette classe n'est pas instanciable, et les classes qui héritent doivent implémenter
+ *     la methode generate() qui est responsable de la génération du graphe.
+ * </p>
+ * @see BaseGenerator#generate()
+ */
 public abstract class BaseGenerator {
 
 	/**
@@ -57,28 +66,50 @@ public abstract class BaseGenerator {
 
 
     /**
-     * cet map prefAttachSorted est utilisé pour verifier la loi de disrtibution présenté dans le rapport
-     * map qui attribut à chaque noeud une liste de tout les autres noeuds
-     * qui sont lies à ce premier
-     * on identifie un noeud par un numéro
-     *
-     * @see Node
+     * <p>
+     *     La map prefAttachSorted représente les degrés de chaque noeud, elle est utilisé pour verifier
+     *     la loi de disrtibution des degrés et confirmer si le graphe resultant représente bel et bien
+     *     un réseau unvariant d'échelle (scale free network).
+     *</p>
      */
     protected Map<Integer, List<Integer>> prefAttachSorted = new TreeMap<>();
 
 //TODO: comment this constructors
+
+    /**
+     * <p>
+     *     un constructeur de classe BaseGenerator
+     * </p>
+     * @param ideas la lste des idées possible dans le graphe
+     * @param nbrNodes le nombre de noeuds dans le graphe
+     */
     protected BaseGenerator(List<Idea>ideas,int nbrNodes){
         this.nodes = new TreeMap<>();
         this.edges=new ArrayList<>();
         this.ideas=ideas;
         this.nbrNodes=nbrNodes;
     }
+
+    /**
+     * <p>
+     *     un constructeur de classe BaseGenerator
+     * </p>
+     * @param ideas la lste des idées possible dans le graphe
+     * @param nbrNodes le nombre de noeuds dans le graphe
+     * @param nbrEdges le nombre de liens dans le graphe
+     */
     protected BaseGenerator(List<Idea> ideas,int nbrNodes,int nbrEdges){
         this(ideas,nbrNodes);
         this.nbrEdges=nbrEdges;
 
     }
 
+    /**
+     * <p>
+     *     un constructeur de classe BaseGenerator
+     * </p>
+     * @param ideas la lste des idées possible dans le graphe
+     */
     public BaseGenerator(List<Idea> ideas) {
         this.ideas=ideas;
     }
@@ -86,21 +117,16 @@ public abstract class BaseGenerator {
 
     //TODO: comment this
 
+    /**
+     * Cette methods est respnsable de la génération du graphe,
+     * toute les classe qui herite de BaseGanerator doivent l'implémenter
+     */
     abstract public void generate();
-
-
-
-
-
-
-
-
 
     /**
      * initialise les noeuds
      * cette methode instancie tout les noeuds et attribut a chaque noeud un idée aléatoire
      *
-     * @see BaseGenerator#getRandomIdea()
      */
     public void initNodes() {
         for (int i = 0; i < nbrNodes; i++) {
@@ -110,7 +136,7 @@ public abstract class BaseGenerator {
 
     /**
      * cette methode génère une poids aléatoire
-     * @return un poids aléatoire
+     * @return un poids aléatoire.
      */
     public int generateRandomWeight() {
         Random random = new Random();
@@ -120,7 +146,7 @@ public abstract class BaseGenerator {
     /**
      * cette methode nous permet de trier les
      * noeuds selon leurs degrés de centralité
-     * et les afficher
+     * et les afficher.
      */
     public void powerLawVerification() {
 
@@ -138,75 +164,15 @@ public abstract class BaseGenerator {
         );
     }
 
-    //TODO comment after updating the code
-//    public void saveIdeasStatisticsInFile(){
-//        try{
-//            FileWriter fw=new FileWriter("IdeaStatistics.txt");
-//            BufferedWriter bw=new BufferedWriter(fw);
-//            Map<Idea,Long> sum=nodes.values().stream().collect(
-//                    Collectors.groupingBy(Node::getIdea,Collectors.counting())
-//            );
-//            sum.forEach((k,v)-> {
-//                try {
-//                    bw.write(k.getName()+":"+v+"\n");
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//            });
-//            bw.close();
-//            fw.close();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
     /**
-     * cette methode permet de générer un fichier
-     * contenant tout les liens du graphe
-     * sous la forme
-     * arcs[(0,1), (0,3), (1,3), ...]
-     *
-     * @see RmatGenerator#edges
-     */
-//    public void saveEdgesInFile() {
-//        BufferedWriter bw = null;
-//        FileWriter fw = null;
-//        try {
-//            fw = new FileWriter("edges.txt");
-//            bw = new BufferedWriter(fw);
-//            bw.write("arcs=[");
-//            Iterator<Edge> it = edges.iterator();
-//            Edge d = it.next();
-//            bw.write("(" + d.getNodeSrc().getNum() +"," + d.getNodeSrc().getIdea().getValue()
-//                    + "," + d.getNodeDest().getNum() + ")");
-//            for (; it.hasNext();) {
-//                d = it.next();
-//                bw.write(", (" + d.getNodeSrc().getNum() + "," + d.getNodeDest().getNum() + ")");
-//            }
-//            bw.write("]");
-//            System.out.println("Done");
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        } finally {
-//            try {
-//                if (bw != null)
-//                    bw.close();
-//                if (fw != null)
-//                    fw.close();
-//            } catch (IOException ex) {
-//                ex.printStackTrace();
-//            }
-//        }
-//    }
-
-    /**
-     * dessine le graphe de distribution des centralités des noeuds
+     * dessine le graphe de distribution des degrés des noeuds
      */
     public void drawPowerLaw() {
         new GraphDrawer(prefAttachSorted).setVisible(true);
     }
 
     /**
-     * cette methode permet d'identifier les neouds d'un lien pour calculer leurs centralités
+     * cette methode permet d'identifier les neouds d'un lien pour calculer leurs degrés
      * @param edge le lien qui contient les informations sur les noeuds source et destination
      */
     public void saveNodesStatistics(Edge edge) {
@@ -215,7 +181,7 @@ public abstract class BaseGenerator {
     }
 
     /**
-     *
+     * le getter de la liste des liens
      * @return
      */
     public List<Edge> getEdges()
@@ -282,8 +248,7 @@ public abstract class BaseGenerator {
      */
     public int getDegreeSum() {
         int s=0;
-        for (Node n :
-                nodes.values()) {
+        for (Node n :nodes.values()) {
             s+=n.getInDegree();
         }
         return s;
@@ -300,14 +265,6 @@ public abstract class BaseGenerator {
             i.setValue(v);
             v+=2.f/(this.ideas.size()-1);
         }
-    }
-
-    /**
-	 *^just trying to help anass with the values of h=the ideas
-     * // todo also remove this in the end
-     */
-    public void printIdeaValues(){
-        this.ideas.stream().forEach(System.out::println);
     }
 
     //todo review this with anis
@@ -391,21 +348,3 @@ public abstract class BaseGenerator {
         nodes.put(mostFollowedNode.getNum(),mostFollowedNode);
     }
 }
-
-	
-	
-	
-  	
-	
-	
-	
-	
-    
-    
-    
-    
-    
-    
-    
-    
-
