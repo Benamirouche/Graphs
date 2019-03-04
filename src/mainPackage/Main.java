@@ -32,7 +32,7 @@ public class Main {
            BarabasiGenerator g=new BarabasiGenerator(0.5f,ideas,1000,3,0.01f);
            //g.generateWithoutSeed();
 
-               g.generate();
+           g.generate();
 
            //RmatGenerator g=new RmatGenerator(100000,2000000,0.4f,0.2f,0.2f,ideas);
            //g.generate();

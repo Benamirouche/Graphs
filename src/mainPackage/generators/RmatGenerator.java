@@ -134,7 +134,6 @@ public class RmatGenerator extends BaseGenerator{
 	 * @see RmatGenerator#generateRandomEdge()
 	 * @see Edge#getNodeDest()
 	 * @see Edge#getNodeSrc()
-	 * @see RmatGenerator#saveEdgesInFile()
 	 */
 	public void generate() {
 		int i = 1;

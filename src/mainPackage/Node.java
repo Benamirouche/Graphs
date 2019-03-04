@@ -144,6 +144,7 @@ public class Node  {
 	{
 		return "node num: "+this.getNum();
 	}
+	 public void nothing(){}
 
 
 	public  void writeGexf(BufferedWriter bw) throws IOException {

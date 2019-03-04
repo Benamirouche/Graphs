@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 
+
 /**
  * <p>
  *     Cette classe représente un generateur de graphe par l'approche de barabasi-albert,
@@ -30,29 +31,27 @@ public class BarabasiGenerator extends BaseGenerator {
     private float randomRatio=0;
 
     /**
-     * Le nombre de noeuds total du graphe qu'on va générer.
-     */
- //   private int finalNbrNodes;
-
-    /**
      * 2*k represente (avec une petite marge d'erreur) le degrés moyen de chaque noeud du graphe.
      */
     private int k;
 
     //TODO: comments
+    /**
+     *
+     */
     private float randomDensity=-1f;
 
 
     /**
      * <p>
-     *     Le seul constructeur de la classe qui prend en parametre:
+     *     Un constructeur de la classe qui prend en paramètres:
      * </p>
      * @param randomRatio Le pourcentage du graphe utilisé comme graphe initial.
      * @param ideas La liste des idées possible dans le graphe.
      * @param finalNbrNodes Le nombre total de noeuds du graphe resultant.
      * @param k Un paramètre pour controller la densité du graphe.
      */
-    public BarabasiGenerator(float randomRatio,List<Idea> ideas,int finalNbrNodes ,int k){
+    public BarabasiGenerator(float randomRatio, List<Idea> ideas, int finalNbrNodes , int k){
         super(ideas,finalNbrNodes);
         this.ideas=ideas;
         this.randomRatio=randomRatio;
@@ -65,12 +64,13 @@ public class BarabasiGenerator extends BaseGenerator {
 
     /**
      * <p>
-     *     Le seul constructeur de la classe qui prend en parametre:
+     *     Un constructeur de la classe qui prend en parametre:
      * </p>
      * @param randomRatio Le pourcentage du graphe utilisé comme graphe initial.
      * @param ideas La liste des idées possible dans le graphe.
      * @param finalNbrNodes Le nombre total de noeuds du graphe resultant.
      * @param k Un paramètre pour controller la densité du graphe.
+     *          //todo randomdensity:
      */
     public BarabasiGenerator(float randomRatio,List<Idea> ideas,int finalNbrNodes ,int k,float randomDensity){
         super(ideas,finalNbrNodes);
@@ -81,12 +81,6 @@ public class BarabasiGenerator extends BaseGenerator {
         this.randomDensity=randomDensity;
         setIdeaValues();// for Anass: associate every idea to a float between -.1 and +.1
     }
-
-
-
-
-
-
 
     /**
      * <p>
@@ -149,7 +143,9 @@ public class BarabasiGenerator extends BaseGenerator {
      * </p>
      * @param i Le numéro du noeud
      * @param node Le nouveau noeud
-     * @return Si le noeud n'est un noeud isolé du graphe on retourne False sinon on retourne True
+     * @return Si le noeud est isolé du graphe, il ne sera pas créé (il ne sera pas ajouté à la liste des noeuds du graphe)
+     * et on retourne False
+     * sinon l est ajouter à la liste des noeuds du graphe et on retourne True
      */
     public boolean generateOneNode(int i, Node node){
         Random random = new Random();
@@ -189,45 +185,33 @@ public class BarabasiGenerator extends BaseGenerator {
         return (float)existentNode.getDegree()/getDegreeSum();
     }
 
-    /**
-     * retourne le nombre de noeuds final qu'on espère atteindre
-     * @return le nombre de noeuds final qu'on espère atteindre
-     */
-//    public int getFinalNbrNodes() {
-//        return finalNbrNodes;
-//    }
-
-
     // TODO: comment all this
 
-public boolean isSeeded(){ return randomDensity!=-1f;}
+    /**
+     *
+     * @return
+     */
+    public boolean isSeeded(){ return randomDensity!=-1f;}
 
-
-
-
-
-
+    /**
+     * <p>
+     *     Cette fonction est la fonction responsable de la génération final du graphe, elle fait appel à la fonction
+     *     correspondante selon le constructeur choisi par l'utilisateur.
+     *     todo develop!
+     * </p>
+     */
     @Override
     public void generate() {
-
-
         try {
-
             if(isSeeded()) {
                 generateWithSeed(randomDensity);
             }
             else{
-
                 generateWithoutSeed();
             }
-
-
         } catch (WrongParametersException e) {
             e.printStackTrace();
         }
     }
-
-
-
 
 }

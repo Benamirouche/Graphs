@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 
+
 public abstract class BaseGenerator {
 
 	/**
@@ -26,30 +27,37 @@ public abstract class BaseGenerator {
      * le chemin (relatif) vers le fichier des logs
      */
 	public static final String LOGS_PATH=BASE_PATH+"logs"+File.separator;
+
 	/**
 	 * le chemin (relatif) vers le fichier du graphe
      */
 	public static final String GRAPHS_PATH=BASE_PATH+"graphs"+File.separator;
+
     /**
      * le seuil à ne pas dépasser pour les poids des liens
      */
     protected static final int WEIGHT_MAX = 100;
+
     /**
      * le nombre de noeuds
      */
     protected int nbrNodes=0;
+
     /**
      * le nombre de liens
      */
     protected int nbrEdges=0;
+
     /**
      * la liste des idées possibles dans le graphe
      */
     protected List<Idea> ideas;
+
     /**
      * la liste de tout les liens du graphe
      */
     protected List<Edge> edges;
+
     /**
      * map qui attribut à chaque identificateur l'objet Node correspondant
      */
@@ -60,44 +68,62 @@ public abstract class BaseGenerator {
 
 
     /**
-     * cet map prefAttachSorted est utilisé pour verifier la loi de disrtibution présenté dans le rapport
-     * map qui attribut à chaque noeud une liste de tout les autres noeuds
-     * qui sont lies à ce premier
-     * on identifie un noeud par un numéro
+     * Cette map prefAttachSorted est utilisé pour verifier la loi de disrtibution des degré,
+     * elle nous servira pour déssiner le graphe de la distribution et verifier si le graphe
+     * représente vraiment un réseau invariant d'échelle (scale free network)
      *
      * @see Node
      */
     protected Map<Integer, List<Integer>> prefAttachSorted = new TreeMap<>();
 
-//TODO: comment this constructors
+    /**
+     * <p>
+     *     Un constructeur de la classe BaseGenerator qui prends en paramètres les attributs communs
+     *     entre tout les autres générateurs.
+     * </p>
+     * @param ideas la liste des idées possible dans le graphe
+     * @param nbrNodes le nombre de noeuds dans le graphe
+     */
     protected BaseGenerator(List<Idea>ideas,int nbrNodes){
         this.nodes = new TreeMap<>();
-        this.edges=new ArrayList<>();
+        this.edges = new ArrayList<>();
         this.ideas=ideas;
         this.nbrNodes=nbrNodes;
     }
+
+    /**
+     * <p>
+     *     Un constructeur de la classe BaseGenerator qui prends en paramètres les attributs nécessaire
+     *     pour certain générateur.
+     * </p>
+     * @param ideas la liste des idées possible dans le graphe
+     * @param nbrNodes le nombre de noeuds dans le graphe
+     * @param nbrEdges le nombre de liens dans le graphe
+     */
     protected BaseGenerator(List<Idea> ideas,int nbrNodes,int nbrEdges){
         this(ideas,nbrNodes);
         this.nbrEdges=nbrEdges;
 
     }
 
+    /**
+     * Un constructeur de la classe BaseGenerator qui prends en paramètre la liste des idéees,
+     * utile pour générer les graphes de la bibliotèque JgraphT
+     * @param ideas la liste des idées possible dans le graphe
+     */
     public BaseGenerator(List<Idea> ideas) {
         this.ideas=ideas;
     }
 
-
-    //TODO: comment this
-
+    /**
+     * <p>
+     *     La methode responsable de la génération du graphe qui doit etre obligatoirement par tout les générateur
+     *     qui herite de BaseGenerator.
+     *     Cette methode modifiera la liste des neouds et la liste des liens
+     *     pour qu'ils representeront bel et bien "un graphe".
+     * </p>
+     */
     abstract public void generate();
-
-
-
-
-
-
-
-
 
     /**
      * initialise les noeuds
@@ -142,6 +168,13 @@ public abstract class BaseGenerator {
     }
 
     //TODO comment after updating the code
+
+    /**
+     * <p>
+     *     Cette mothode crée un fichier IdeaStatistics qui contient le nombre d'occurence de chaque idée dans le graphe.
+     * </p>
+     *
+     */
     public void saveIdeasStatisticsInFile(){
         try{
             FileWriter fw=new FileWriter("IdeaStatistics.txt");
@@ -162,7 +195,8 @@ public abstract class BaseGenerator {
             e.printStackTrace();
         }
     }
-    /**
+
+    /** todo delete this later
      * cette methode permet de générer un fichier
      * contenant tout les liens du graphe
      * sous la forme
@@ -218,8 +252,8 @@ public abstract class BaseGenerator {
     }
 
     /**
-     *
-     * @return
+     * <p>le getter de la liste de liens</p>
+     * @return la liste de liens dans le graphe
      */
     public List<Edge> getEdges()
     {
@@ -246,7 +280,7 @@ public abstract class BaseGenerator {
 	}
 
 	/**
-     *retourne le noeud correspondant au numéro indiqué en paramètre
+     * retourne le noeud correspondant au numéro indiqué en paramètre
      * @param node le numéro du noeud
      * @return le noeud correspondant au numéro indiqué
      */
@@ -315,32 +349,21 @@ public abstract class BaseGenerator {
 
     //todo review this with anis
     /**
-    anis changes**/
-		
+     * <p>
+     *     représenter
+     * </p>
+     */
     public void saveEdgesGEXF() {
 		new GexfGraphWriter(this).write();
 	}
 
-
-
-
    	public void getNodesNeighbours() {
 		new StructeredGraphWriter(this).write();
-
 	}
-
-
 
 	public void saveIdeasApparition() {
 	  new IdeasGraphWriter(this).write();
 	}
-	  
-	   
-	   
-		   
-		   
-		   
-	   
 }	
 
 	
