@@ -19,9 +19,13 @@ public class Main {
 		
 		
        SwingUtilities.invokeLater(() -> {
-            ideas.add(new Idea("A"));
-            ideas.add(new Idea("B"));
-            ideas.add(new Idea("C"));
+           float i=0.0f;
+
+            ideas.add(new Idea("A",i));
+            i+=0.1f;
+            ideas.add(new Idea("B",i));
+           i+=0.1f;
+            ideas.add(new Idea("C",i));
            /* ideas.add(new Idea("D"));
             ideas.add(new Idea("E"));
             ideas.add(new Idea("F"));

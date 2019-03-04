@@ -58,6 +58,9 @@ public class StructeredGraphWriter extends GraphWriter {
         line+="{";
         line+=nSrc.getIdea().getName();
         line+=",";
+        System.out.println("hello "+nSrc.getIdea().getIndex());
+
+
         line+=nSrc.getIdea().getIndex();
         line+=",";
         line+=nSrc.getUncertainty();

@@ -8,12 +8,8 @@ import mainPackage.GraphWriters.StructeredGraphWriter;
 import mainPackage.Idea;
 import mainPackage.Node;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public abstract class BaseGenerator {
 
@@ -142,26 +138,26 @@ public abstract class BaseGenerator {
     }
 
     //TODO comment after updating the code
-    public void saveIdeasStatisticsInFile(){
-        try{
-            FileWriter fw=new FileWriter("IdeaStatistics.txt");
-            BufferedWriter bw=new BufferedWriter(fw);
-            Map<Idea,Long> sum=nodes.values().stream().collect(
-                    Collectors.groupingBy(Node::getIdea,Collectors.counting())
-            );
-            sum.forEach((k,v)-> {
-                try {
-                    bw.write(k.getName()+":"+v+"\n");
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            });
-            bw.close();
-            fw.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+//    public void saveIdeasStatisticsInFile(){
+//        try{
+//            FileWriter fw=new FileWriter("IdeaStatistics.txt");
+//            BufferedWriter bw=new BufferedWriter(fw);
+//            Map<Idea,Long> sum=nodes.values().stream().collect(
+//                    Collectors.groupingBy(Node::getIdea,Collectors.counting())
+//            );
+//            sum.forEach((k,v)-> {
+//                try {
+//                    bw.write(k.getName()+":"+v+"\n");
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            });
+//            bw.close();
+//            fw.close();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
     /**
      * cette methode permet de générer un fichier
      * contenant tout les liens du graphe
@@ -170,36 +166,36 @@ public abstract class BaseGenerator {
      *
      * @see RmatGenerator#edges
      */
-    public void saveEdgesInFile() {
-        BufferedWriter bw = null;
-        FileWriter fw = null;
-        try {
-            fw = new FileWriter("edges.txt");
-            bw = new BufferedWriter(fw);
-            bw.write("arcs=[");
-            Iterator<Edge> it = edges.iterator();
-            Edge d = it.next();
-            bw.write("(" + d.getNodeSrc().getNum() +"," + d.getNodeSrc().getIdea().getValue()
-                    + "," + d.getNodeDest().getNum() + ")");
-            for (; it.hasNext();) {
-                d = it.next();
-                bw.write(", (" + d.getNodeSrc().getNum() + "," + d.getNodeDest().getNum() + ")");
-            }
-            bw.write("]");
-            System.out.println("Done");
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (bw != null)
-                    bw.close();
-                if (fw != null)
-                    fw.close();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-        }
-    }
+//    public void saveEdgesInFile() {
+//        BufferedWriter bw = null;
+//        FileWriter fw = null;
+//        try {
+//            fw = new FileWriter("edges.txt");
+//            bw = new BufferedWriter(fw);
+//            bw.write("arcs=[");
+//            Iterator<Edge> it = edges.iterator();
+//            Edge d = it.next();
+//            bw.write("(" + d.getNodeSrc().getNum() +"," + d.getNodeSrc().getIdea().getValue()
+//                    + "," + d.getNodeDest().getNum() + ")");
+//            for (; it.hasNext();) {
+//                d = it.next();
+//                bw.write(", (" + d.getNodeSrc().getNum() + "," + d.getNodeDest().getNum() + ")");
+//            }
+//            bw.write("]");
+//            System.out.println("Done");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        } finally {
+//            try {
+//                if (bw != null)
+//                    bw.close();
+//                if (fw != null)
+//                    fw.close();
+//            } catch (IOException ex) {
+//                ex.printStackTrace();
+//            }
+//        }
+//    }
 
     /**
      * dessine le graphe de distribution des centralités des noeuds
@@ -234,7 +230,7 @@ public abstract class BaseGenerator {
      */
     public Idea getRandomIdea() {
         Random random = new Random();
-        return ideas.get(random.nextInt(ideas.size() - 1));
+        return ideas.get(random.nextInt(ideas.size() ));
     }
 
 	/**
