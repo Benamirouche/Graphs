@@ -1,9 +1,7 @@
 package mainPackage;
 
-import mainPackage.GraphWriters.GexfGraphWriter;
-import mainPackage.GraphWriters.IdeasGraphWriter;
-import mainPackage.GraphWriters.StructeredGraphWriter;
-import mainPackage.generators.BarabasiGenerator;
+import SomeSimulations.RmatCustomizedSimulation;
+import SomeSimulations.RmatSimpleSimulation;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -50,7 +48,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-		List<Idea> ideas=new ArrayList<>();
+
         loadParamsFromArgs(args);
         initIdeasDictionary();
 
@@ -58,29 +56,29 @@ public class Main {
 
        SwingUtilities.invokeLater(() -> {
 
+                generate();
 
-
-           BarabasiGenerator g=new BarabasiGenerator(0.5f,ideas,1000,3,0.01f);
-
-
-               g.generate();
-
-           //RmatGenerator g=new RmatGenerator(100000,2000000,0.4f,0.2f,0.2f,ideas);
-           //g.generate();
-           //RandomGraphGenerator g=new RandomGraphGenerator(1000,ideas);
-           //System.out.println(g.generate(0.1f));
-           System.out.println(g.getNbrNodes()+",,,,,"+g.getNbrNodes());
-           System.out.println(g.getNbrEdges());
-           System.out.println(((float)g.getDegreeSum()/(float)1000));
-           System.out.println(g.getNodes().size());
-           g.powerLawVerification();
-           g.drawPowerLaw();
-           new GexfGraphWriter(g).write();
-           new IdeasGraphWriter(g).write();
-           new StructeredGraphWriter(g).write();
-
-           //g.saveEdgesGEXF();
-            //bg.saveEdgesInFile();
+//           BarabasiGenerator g=new BarabasiGenerator(0.5f,ideas,1000,3,0.01f);
+//
+//
+//               g.generate();
+//
+//           //RmatGenerator g=new RmatGenerator(100000,2000000,0.4f,0.2f,0.2f,ideas);
+//           //g.generate();
+//           //RandomGraphGenerator g=new RandomGraphGenerator(1000,ideas);
+//           //System.out.println(g.generate(0.1f));
+//           System.out.println(g.getNbrNodes()+",,,,,"+g.getNbrNodes());
+//           System.out.println(g.getNbrEdges());
+//           System.out.println(((float)g.getDegreeSum()/(float)1000));
+//           System.out.println(g.getNodes().size());
+//           g.powerLawVerification();
+//           g.drawPowerLaw();
+//           new GexfGraphWriter(g).write();
+//           new IdeasGraphWriter(g).write();
+//           new StructeredGraphWriter(g).write();
+//
+//           //g.saveEdgesGEXF();
+//            //bg.saveEdgesInFile();
        });
 	}
 
@@ -123,11 +121,11 @@ public static void  loadParamsFromArgs(String[] args){
 }
 
 
-public List<Idea> getIdeasRequested(String numberOfIdea){
-	    int n=Integer.parseInt(numberOfIdea);
+public static List<Idea> getIdeasRequested(int numberOfIdea){
+
 
 	    List<Idea> ideas=new ArrayList<Idea>();
-	    for(int j=0;j<n;j++) {
+	    for(int j=0;j<numberOfIdea;j++) {
 
 	        ideas.add(ideasDictionary.get(j));
 
@@ -136,6 +134,57 @@ public List<Idea> getIdeasRequested(String numberOfIdea){
 
 }
 
+public static void generate(){
+    List<Idea> ideas=getIdeasRequested(numberOfIdea);
+    List<Idea> customizedIdeas=new ArrayList<>(ideas);
+    customizedIdeas.remove(numberOfIdea-1);
+        switch (typeOfGenerator){
+
+            case RMAT_SIMPLE_GENERATOR_INDEX: new RmatSimpleSimulation(ideas,numberOfNodes,numberOfEdge,0.4f,0.2f,0.2f).simulate(); break;
+            case RMAT_CUSTOMIZED_GENERATOR_INDEX:
+
+                new RmatCustomizedSimulation(customizedIdeas,numberOfNodes,numberOfEdge,0.4f,0.2f,0.2f,getNewIdea()).simulate(); break;
+            case SCALE_FREE_SIMPLE_GENERATOR_INDEX: break;
+            case SCALE_FREE_CUSTOMIZED_GENERATOR_INDEX: break;
+
+            case BARABASI_SIMPLE_GENERATOR_INDEX: break;
+            case BARABASI_CUSTOMIZED_GENERATOR_INDEX: break;
+            case BARABASI_SIMPLE_SEEDED_GENERATOR_INDEX: break;
+            case BARABASI_CUSTOMIZED_SEEDED_GENERATOR_INDEX: break;
+
+            case JGRAPHT_BARABASI_SIMPLE_GENERATOR_INDEX : break;
+            case JGRAPHT_BARABASI_CUSTOMIZED_GENERATOR_INDEX: break;
+            case JGRAPHT_BARABASI_SIMPLE_SEEDED_GENERATOR_INDEX: break;
+            case JGRAPHT_BARABASI_CUSTOMIZED_SEEDED_GENERATOR_INDEX: break;
+
+            case RANDOM_SIMPLE_GENERATOR_INDEX: break;
+            case RANDOM_CUSTOMIZED_GENERATOR_INDEX: break;
+
+
+            case JGRAPHT_SMALL_WORLD_SIMPLE_GENERATOR_INDEX: break;
+
+            case JGRAPHT_SMALL_WORLD_CUSTOMIZED_GENERATOR_INDEX: break;
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+}
+
+    private static Idea getNewIdea() {
+
+        return ideasDictionary.get(numberOfIdea-1);
+    }
 
 
 }
