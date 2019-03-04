@@ -10,6 +10,7 @@ import mainPackage.Node;
 
 import java.io.File;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public abstract class BaseGenerator {
 
@@ -313,31 +314,83 @@ public abstract class BaseGenerator {
     /**
     anis changes**/
 		
-    public void saveEdgesGEXF() {
+    public void writeGexfGraph() {
 		new GexfGraphWriter(this).write();
 	}
 
 
 
 
-   	public void getNodesNeighbours() {
+   	public void writeStructuredGraph() {
 		new StructeredGraphWriter(this).write();
 
 	}
 
 
 
-	public void saveIdeasApparition() {
+	public void writeIdeasApparition() {
 	  new IdeasGraphWriter(this).write();
 	}
-	  
-	   
-	   
-		   
-		   
-		   
-	   
-}	
+//TODO
+    public Map<Node,List<Node>> getOrganizedFollowingList(){
+        Map<Node, List<Node>> followingList= edges.stream()
+                .collect(Collectors.groupingBy(Edge::getNodeSrc,
+                        Collectors.mapping(Edge::getNodeDest, Collectors.toList()))
+                );
+        getNonFollowingNodes(followingList).forEach(node->followingList.put(node,new ArrayList<Node>()));
+
+        return followingList;
+
+    }
+
+//TODO
+    public Set<Node> getNonFollowingNodes(Map<Node,List<Node>> organizedList){
+        return nodes.values().stream().filter((n)->!organizedList.containsKey(n)).collect(Collectors.toSet());
+    }
+
+
+
+
+
+//TODO
+    public Set<Node> getNonFollowedNodes(Map<Node,List<Node>> organizedList){
+        return nodes.values()
+                .stream()
+                .filter((n)->!organizedList.containsKey(n))
+                .collect(Collectors.toSet());
+    }
+
+    //TODO
+    public Map<Node,List<Node>> getOrganizedFollowersList() {
+        Map<Node, List<Node>> followersList = edges.stream()
+                .collect(Collectors.groupingBy
+                        (Edge::getNodeDest,
+                                Collectors.mapping(Edge::getNodeSrc, Collectors.toList()))
+                );
+
+        getNonFollowedNodes(followersList).forEach(node -> followersList.put(node, new ArrayList<Node>()));
+
+        return followersList;
+
+
+    }
+
+//TODO
+
+    public Optional<Map.Entry<Node, List<Node>>> getMostFollowedNode(){
+
+          Map<Node,List<Node>>followersList= getOrganizedFollowersList();
+
+          return followersList.entrySet().stream().max(Comparator.comparing(entry->entry.getValue().size()));
+    }
+
+    public void customizeGraph(Node mostFollowedNode, Idea idea) {
+        ideas.add(idea);
+        nodes.remove(mostFollowedNode.getNum());
+        mostFollowedNode.setIdea(idea);
+        nodes.put(mostFollowedNode.getNum(),mostFollowedNode);
+    }
+}
 
 	
 	

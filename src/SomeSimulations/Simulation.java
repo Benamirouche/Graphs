@@ -1,8 +1,5 @@
 package SomeSimulations;
 
-import mainPackage.GraphWriters.GexfGraphWriter;
-import mainPackage.GraphWriters.IdeasGraphWriter;
-import mainPackage.GraphWriters.StructeredGraphWriter;
 import mainPackage.generators.BaseGenerator;
 
 public abstract class Simulation {
@@ -33,18 +30,17 @@ public abstract class Simulation {
     }
 
     public void writeGexf(){
-
-        new GexfGraphWriter(generator).write();
+        generator.writeGexfGraph();
 
     }
     public  void writeStructuredGraph(){
 
-        new StructeredGraphWriter(generator).write();
+        generator.writeStructuredGraph();
     }
 
     public void writeIdeas(){
 
-        new IdeasGraphWriter(generator).write();
+       generator.writeIdeasApparition();
     }
     abstract public void customizingGeneration();
 
