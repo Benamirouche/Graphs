@@ -1,6 +1,5 @@
 package mainPackage;
 
-
 import java.io.BufferedWriter;
 import java.io.IOException;
 
@@ -144,7 +143,6 @@ public class Edge {
 	public void writeGexf(BufferedWriter bw,int index) throws IOException {
 
 		bw.write("<edge id=\""+index+"\" source=\""+nodeSrc.getNum()+"\" target=\""+nodeDest.getNum()+"\" weight=\""+weight+"\"/>\n");
-
 	}
 
 }
