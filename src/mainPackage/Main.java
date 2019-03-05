@@ -51,15 +51,11 @@ public class Main {
         initIdeasDictionary();
 
        SwingUtilities.invokeLater(() -> {
-
                 generate();
-
        });
 	}
 
-
 public static void initIdeasDictionary(){
-
 
 	    float i=0.0f;
 	    ideasDictionary.add(new Idea("A",i));
@@ -83,8 +79,6 @@ public static void initIdeasDictionary(){
         ideasDictionary.add(new Idea("J",i));
         i+=0.1f;
         ideasDictionary.add(new Idea("K",i));
-
-
 }
 
 public static void  loadParamsFromArgs(String[] args){
@@ -98,12 +92,9 @@ public static void  loadParamsFromArgs(String[] args){
 
 public static List<Idea> getIdeasRequested(int numberOfIdea){
 
-
 	    List<Idea> ideas=new ArrayList<Idea>();
 	    for(int j=0;j<numberOfIdea;j++) {
-
 	        ideas.add(ideasDictionary.get(j));
-
         }
 	    return ideas;
 
@@ -149,19 +140,7 @@ public static void generate(){
 
             case JGRAPHT_SMALL_WORLD_CUSTOMIZED_GENERATOR_INDEX: new JgraphTKleinbergSmallWorldCustomizedSimulation(customizedIdeas,(int)Math.sqrt(numberOfNodes),3,2,2,getNewIdea()).simulate(); break;
 
-
-
-
-
-
-
-
-
         }
-
-
-
-
 
 }
 
@@ -169,6 +148,5 @@ public static void generate(){
 
         return ideasDictionary.get(numberOfIdea-1);
     }
-
 
 }
