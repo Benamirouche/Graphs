@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
 * <p>
-*   Cette Class adapt le generateur Barabasi de JgraphT a nos classes de Node et Edge
+*   Cette Classe adapte le generateur Barabasi de JgraphT a nos classes de Node et Edge
 *</p>
 */
 public class JgraphTBarabasiAlbertGenerator extends JgraphTGenerators {
