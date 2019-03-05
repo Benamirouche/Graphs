@@ -4,7 +4,6 @@ import mainPackage.Idea;
 import mainPackage.Node;
 import org.jgrapht.generate.KleinbergSmallWorldGraphGenerator;
 import org.jgrapht.graph.DefaultEdge;
-
 import java.util.List;
 /**
 * <p>
