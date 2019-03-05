@@ -2,9 +2,11 @@ package SomeSimulations;
 
 import mainPackage.Idea;
 import mainPackage.generators.JgraphTKleinbergSmallWorldGenerator;
-
 import java.util.List;
 
+/**
+* Cette classe prepare une simulation simple d'un generateur KleinbergSmallWorld de JgraphT
+*/
 public class JgraphTKleinbergSmallWorldSimpleSimulation extends SimpleSimulation {
 
 
