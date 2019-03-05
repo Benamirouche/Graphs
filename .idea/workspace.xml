@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="918c722a-8e83-46f1-8712-a629d890206b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/mainPackage/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mainPackage/Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/mainPackage/generators/BarabasiGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mainPackage/generators/BarabasiGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/mainPackage/generators/BaseGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mainPackage/generators/BaseGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/mainPackage/generators/RandomGraphGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/mainPackage/generators/RandomGraphGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mainPackage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPackage/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPackage/generators/BarabasiGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPackage/generators/BarabasiGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPackage/generators/BaseGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPackage/generators/BaseGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainPackage/generators/JgraphTGenerators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPackage/generators/JgraphTGenerators.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,8 +32,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mainPackage/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3761">
-              <caret line="179" column="128" selection-start-line="179" selection-start-column="128" selection-end-line="179" selection-end-column="128" />
+            <state relative-caret-position="2618">
+              <caret line="132" column="73" selection-start-line="132" selection-start-column="73" selection-end-line="132" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SomeSimulations/BarabasiSimpleSimulation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SomeSimulations/BarabasiCustomizedSimulation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -48,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/BarabasiGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="170" column="20" selection-start-line="170" selection-start-column="16" selection-end-line="170" selection-end-column="20" />
+            <state relative-caret-position="3101">
+              <caret line="218" column="29" selection-start-line="218" selection-start-column="29" selection-end-line="218" selection-end-column="29" />
               <folding>
                 <element signature="docComment;method#BarabasiGenerator#0;class#BarabasiGenerator#0" />
                 <element signature="docComment;method#BarabasiGenerator#1;class#BarabasiGenerator#0" />
@@ -64,7 +75,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/JgraphTGenerators.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
+            <state relative-caret-position="1077">
               <caret line="71" column="64" selection-start-line="71" selection-start-column="64" selection-end-line="71" selection-end-column="64" />
             </state>
           </provider>
@@ -159,15 +170,20 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="anis1319 &lt;aniskhar@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/mainPackage/generators/BarabasiGenerator.java" />
-        <option value="$PROJECT_DIR$/src/mainPackage/Main.java" />
         <option value="$PROJECT_DIR$/src/mainPackage/generators/JgraphTGenerators.java" />
         <option value="$PROJECT_DIR$/src/mainPackage/generators/BaseGenerator.java" />
+        <option value="$PROJECT_DIR$/src/mainPackage/Main.java" />
       </list>
     </option>
   </component>
@@ -234,7 +250,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551767405785" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551781993399" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -339,12 +355,12 @@
       <workItem from="1550482574231" duration="7505000" />
       <workItem from="1551191026069" duration="3344000" />
     </task>
-    <task id="LOCAL-00001" summary="with this commit we added a method that outputs a file with ideas and the number of nodes having this idea, the format is &quot;'Idea':nbrOfNodes&quot;">
-      <created>1549382034549</created>
+    <task id="LOCAL-00001" summary="all the generators work">
+      <created>1551767430855</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1549382034549</updated>
+      <updated>1551767430855</updated>
     </task>
     <task id="LOCAL-00002" summary="just correcting some method calls (Idea.getName())">
       <created>1549548244049</created>
@@ -507,6 +523,7 @@
       <option name="project" value="LOCAL" />
       <updated>1551714829249</updated>
     </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -604,7 +621,8 @@
     <MESSAGE value="add of some another simulation" />
     <MESSAGE value="add of all the simulations" />
     <MESSAGE value="main work" />
-    <option name="LAST_COMMIT_MESSAGE" value="main work" />
+    <MESSAGE value="all the generators work" />
+    <option name="LAST_COMMIT_MESSAGE" value="all the generators work" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -705,34 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/BarabasiGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="170" column="20" selection-start-line="170" selection-start-column="16" selection-end-line="170" selection-end-column="20" />
-          <folding>
-            <element signature="docComment;method#BarabasiGenerator#0;class#BarabasiGenerator#0" />
-            <element signature="docComment;method#BarabasiGenerator#1;class#BarabasiGenerator#0" />
-            <element signature="docComment;method#generateWithSeed#0;class#BarabasiGenerator#0" />
-            <element signature="docComment;method#generateWithoutSeed#0;class#BarabasiGenerator#0" />
-            <element signature="docComment;method#generateOneNode#0;class#BarabasiGenerator#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/JgraphTKleinbergSmallWorldGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/JgraphTGenerators.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="71" column="64" selection-start-line="71" selection-start-column="64" selection-end-line="71" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/BaseGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2243">
@@ -743,10 +733,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/JgraphTGenerators.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1077">
+          <caret line="71" column="64" selection-start-line="71" selection-start-column="64" selection-end-line="71" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/JgraphTKleinbergSmallWorldGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainPackage/generators/BarabasiGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3101">
+          <caret line="218" column="29" selection-start-line="218" selection-start-column="29" selection-end-line="218" selection-end-column="29" />
+          <folding>
+            <element signature="docComment;method#BarabasiGenerator#0;class#BarabasiGenerator#0" />
+            <element signature="docComment;method#BarabasiGenerator#1;class#BarabasiGenerator#0" />
+            <element signature="docComment;method#generateWithSeed#0;class#BarabasiGenerator#0" />
+            <element signature="docComment;method#generateWithoutSeed#0;class#BarabasiGenerator#0" />
+            <element signature="docComment;method#generateOneNode#0;class#BarabasiGenerator#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SomeSimulations/BarabasiCustomizedSimulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SomeSimulations/BarabasiSimpleSimulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/mainPackage/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3761">
-          <caret line="179" column="128" selection-start-line="179" selection-start-column="128" selection-end-line="179" selection-end-column="128" />
+        <state relative-caret-position="2618">
+          <caret line="132" column="73" selection-start-line="132" selection-start-column="73" selection-end-line="132" selection-end-column="73" />
         </state>
       </provider>
     </entry>

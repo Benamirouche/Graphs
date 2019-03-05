@@ -47,52 +47,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-
         loadParamsFromArgs(args);
         initIdeasDictionary();
-
-//        List<Idea> ideas=getIdeasRequested(4);
-//        List<Idea> customizedIdeas=new ArrayList<>(ideas);
-//        customizedIdeas.remove(3);
-
-//        BarabasiGenerator gen=new BarabasiGenerator(0.3f,ideasDictionary,100,5);
-//        gen.generate();
-        //new JgraphTBarabasiAlbertGenerator(ideasDictionary, 100,20,400).generate();
-
-
-        // new BarabasiSimpleSimulation(0.3f,ideasDictionary,1000,100,0.3f).simulate();
-       // new JgraphTBarabasiCustomizedSimulation(customizedIdeas,100,20,1000,ideasDictionary.get(3)).simulate();
-        //
-
-
-
-
 
        SwingUtilities.invokeLater(() -> {
 
                 generate();
 
-//           BarabasiGenerator g=new BarabasiGenerator(0.5f,ideas,1000,3,0.01f);
-//
-//
-//               g.generate();
-//
-//           //RmatGenerator g=new RmatGenerator(100000,2000000,0.4f,0.2f,0.2f,ideas);
-//           //g.generate();
-//           //RandomGraphGenerator g=new RandomGraphGenerator(1000,ideas);
-//           //System.out.println(g.generate(0.1f));
-//           System.out.println(g.getNbrNodes()+",,,,,"+g.getNbrNodes());
-//           System.out.println(g.getNbrEdges());
-//           System.out.println(((float)g.getDegreeSum()/(float)1000));
-//           System.out.println(g.getNodes().size());
-//           g.powerLawVerification();
-//           g.drawPowerLaw();
-//           new GexfGraphWriter(g).write();
-//           new IdeasGraphWriter(g).write();
-//           new StructeredGraphWriter(g).write();
-//
-//           //g.saveEdgesGEXF();
-//            //bg.saveEdgesInFile();
        });
 	}
 
@@ -170,7 +131,7 @@ public static void generate(){
                 new BarabasiCustomizedSimulation(0.3f,ideas,numberOfNodes,20,getNewIdea()).simulate();break;
             case BARABASI_SIMPLE_SEEDED_GENERATOR_INDEX:
                 new BarabasiSimpleSimulation(0.3f,ideas,numberOfNodes,20,seed).simulate();   break;
-            case BARABASI_CUSTOMIZED_SEEDED_GENERATOR_INDEX: new BarabasiCustomizedSimulation(0.3f,ideas,numberOfNodes,20,0.5f,getNewIdea()).simulate(); break;
+            case BARABASI_CUSTOMIZED_SEEDED_GENERATOR_INDEX: new BarabasiCustomizedSimulation(0.3f,ideas,numberOfNodes,20,seed,getNewIdea()).simulate(); break;
 
             case JGRAPHT_BARABASI_SIMPLE_GENERATOR_INDEX :
                 new JgraphTBarabasiSimpleSimulation(ideas,(int)numberOfNodes/3,20,numberOfNodes).simulate(); break;
