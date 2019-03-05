@@ -61,10 +61,6 @@ public abstract class BaseGenerator {
      */
     protected Map<Integer, Node> nodes;
 
-
-    //TODO: MODIFY THIS
-
-
     /**
      * <p>
      *     La map prefAttachSorted représente les degrés de chaque noeud, elle est utilisé pour verifier
@@ -73,8 +69,6 @@ public abstract class BaseGenerator {
      *</p>
      */
     protected Map<Integer, List<Integer>> prefAttachSorted = new TreeMap<>();
-
-//TODO: comment this constructors
 
     /**
      * <p>
@@ -116,11 +110,8 @@ public abstract class BaseGenerator {
         this.ideas=ideas;
     }
 
-
-    //TODO: comment this
-
     /**
-     * Cette methods est respnsable de la génération du graphe,
+     * Cette methods est responsable de la génération du graphe,
      * toute les classe qui herite de BaseGanerator doivent l'implémenter
      */
     abstract public void generate();
@@ -254,19 +245,6 @@ public abstract class BaseGenerator {
             s+=n.getInDegree();
         }
         return s;
-    }
-
-    /**
-     *^just trying to help anass with the values of h=the ideas
-	 * // todo remove this in the end of the project
-     */
-    public void setIdeaValues(){
-        float v=-1;
-        for (Idea i :
-                this.ideas) {
-            i.setValue(v);
-            v+=2.f/(this.ideas.size()-1);
-        }
     }
 
     //todo review this with anis
