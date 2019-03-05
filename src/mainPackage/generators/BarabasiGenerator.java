@@ -94,8 +94,6 @@ public class BarabasiGenerator extends BaseGenerator {
         do {
             ranGen.generate();
         }while(!ranGen.connectedGraph());
-       // this.nbrNodes= ranGen.getNbrNodes();//just to make sure we affect the nbrNodes of barabsiGenerator by nbrNodes of the randomGenerator
-       // this.nbrEdges=ranGen.getNbrEdges();
         this.nodes.putAll(ranGen.getNodes());
         this.edges.addAll(ranGen.getEdges());
         Node node;
@@ -129,10 +127,6 @@ public class BarabasiGenerator extends BaseGenerator {
             if(generateOneNode(i,node)){
                 System.out.println(" nbr nodes:"+nbrNodes+" comteur: "+i);
                 i++;//generate one node increments automatically the number of nodes
-            }
-            else{
-
-                System.out.println("else else else");
             }
         }
     }
@@ -185,11 +179,9 @@ public class BarabasiGenerator extends BaseGenerator {
         return (float)existentNode.getDegree()/getDegreeSum();
     }
 
-    // TODO: comment all this
-
     /**
-     *
-     * @return
+     * Cette methode servira comme indicateur de choix entre un generateur avec ou sans graphe initial
+     * @return true si 
      */
     public boolean isSeeded(){ return randomDensity!=-1f;}
 
@@ -204,11 +196,9 @@ public class BarabasiGenerator extends BaseGenerator {
     public void generate() {
         try {
             if(isSeeded()) {
-
                 generateWithSeed(randomDensity);
             }
             else{
-                System.out.println("without seed");
                 generateWithoutSeed();
             }
         } catch (WrongParametersException e) {
