@@ -69,6 +69,11 @@ public  class JgraphTGenerators extends BaseGenerator {
 
         graphGenerator.generateGraph(graphGenerated);
         graphGenerated.edgeSet().forEach(System.out::println);
+        graphGenerated.vertexSet().forEach(System.out::println);
+        transferNodes();
+        transferEdges();
+
+        System.out.println("DOONE");
 
     }
     public void transferNodes() {
@@ -85,8 +90,9 @@ public  class JgraphTGenerators extends BaseGenerator {
 
 
         graphGenerated.edgeSet().forEach(dEdge->{
-
-            edges.add(getEdge(dEdge));
+            Edge edge=getEdge(dEdge);
+            saveNodesStatistics(edge);
+            edges.add(edge);
 
         });
 
@@ -98,12 +104,17 @@ public  class JgraphTGenerators extends BaseGenerator {
     public Edge getEdge(DefaultEdge dEdge) {
 
         //Pattern p = Pattern.compile("(node [0-9]+) :  (node [0-9]+)");
-        Pattern p = Pattern.compile("[(] node (\\d+) :  node (\\d+)[)]");
+        Pattern p = Pattern.compile("[(]node num: (\\d+) : node num: (\\d+)[)]");
         Matcher m =p.matcher(dEdge.toString());
 
         System.out.println(m.matches());
+        System.out.println(m.group(0));
+        System.out.println(m.group(1));
         System.out.println(m.group(2));
-        return new Edge(nodes.get(Long.parseLong(m.group(1))),nodes.get(Long.parseLong(m.group(2))),generateRandomWeight());
+
+       // int k=Integer.parseInt(m.group(1));
+        return new Edge(nodes.get(Integer.parseInt(m.group(1)))
+                ,nodes.get(Integer.parseInt(m.group(2))),generateRandomWeight());
 
     }
 

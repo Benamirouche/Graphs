@@ -56,6 +56,7 @@ public class BarabasiGenerator extends BaseGenerator {
         this.ideas=ideas;
         this.randomRatio=randomRatio;
       //  this.finalNbrNodes=finalNbrNodes;
+
         this.k=k;
         setIdeaValues();// for Anass: associate every idea to a float between -.1 and +.1
     }
@@ -76,6 +77,7 @@ public class BarabasiGenerator extends BaseGenerator {
         super(ideas,finalNbrNodes);
         this.ideas=ideas;
         this.randomRatio=randomRatio;
+
        // this.finalNbrNodes=finalNbrNodes;
         this.k=k;
         this.randomDensity=randomDensity;
@@ -132,7 +134,12 @@ public class BarabasiGenerator extends BaseGenerator {
         while (i<=this.nbrNodes) {
             node=new Node(getRandomIdea(),i);
             if(generateOneNode(i,node)){
+                System.out.println(" nbr nodes:"+nbrNodes+" comteur: "+i);
                 i++;//generate one node increments automatically the number of nodes
+            }
+            else{
+
+                System.out.println("else else else");
             }
         }
     }
@@ -160,13 +167,13 @@ public class BarabasiGenerator extends BaseGenerator {
                      */
                 edge=new Edge(node,n,generateRandomWeight());
                 edges.add(edge);
-                this.nbrEdges++;
+
                 saveNodesStatistics(edge);
             }
         });
         if(node.getDegree()!=0){
             this.nodes.put(i,node);
-            this.nbrNodes++;
+
             return true;
         }
         return false;
@@ -204,9 +211,11 @@ public class BarabasiGenerator extends BaseGenerator {
     public void generate() {
         try {
             if(isSeeded()) {
+
                 generateWithSeed(randomDensity);
             }
             else{
+                System.out.println("without seed");
                 generateWithoutSeed();
             }
         } catch (WrongParametersException e) {

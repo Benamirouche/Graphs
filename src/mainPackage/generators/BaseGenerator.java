@@ -111,6 +111,8 @@ public abstract class BaseGenerator {
      * @param ideas la lste des idées possible dans le graphe
      */
     public BaseGenerator(List<Idea> ideas) {
+        this.nodes = new TreeMap<>();
+        this.edges=new ArrayList<>();
         this.ideas=ideas;
     }
 

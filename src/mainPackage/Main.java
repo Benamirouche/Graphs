@@ -1,7 +1,6 @@
 package mainPackage;
 
-import SomeSimulations.RmatCustomizedSimulation;
-import SomeSimulations.RmatSimpleSimulation;
+import SomeSimulations.*;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -51,6 +50,21 @@ public class Main {
 
         loadParamsFromArgs(args);
         initIdeasDictionary();
+
+//        List<Idea> ideas=getIdeasRequested(4);
+//        List<Idea> customizedIdeas=new ArrayList<>(ideas);
+//        customizedIdeas.remove(3);
+
+//        BarabasiGenerator gen=new BarabasiGenerator(0.3f,ideasDictionary,100,5);
+//        gen.generate();
+        //new JgraphTBarabasiAlbertGenerator(ideasDictionary, 100,20,400).generate();
+
+
+        // new BarabasiSimpleSimulation(0.3f,ideasDictionary,1000,100,0.3f).simulate();
+       // new JgraphTBarabasiCustomizedSimulation(customizedIdeas,100,20,1000,ideasDictionary.get(3)).simulate();
+        //
+
+
 
 
 
@@ -140,30 +154,39 @@ public static void generate(){
     customizedIdeas.remove(numberOfIdea-1);
         switch (typeOfGenerator){
 
-            case RMAT_SIMPLE_GENERATOR_INDEX: new RmatSimpleSimulation(ideas,numberOfNodes,numberOfEdge,0.4f,0.2f,0.2f).simulate(); break;
+            case RMAT_SIMPLE_GENERATOR_INDEX:
+                new RmatSimpleSimulation(ideas,numberOfNodes,numberOfEdge,0.4f,0.2f,0.2f).simulate(); break;
+
             case RMAT_CUSTOMIZED_GENERATOR_INDEX:
-
                 new RmatCustomizedSimulation(customizedIdeas,numberOfNodes,numberOfEdge,0.4f,0.2f,0.2f,getNewIdea()).simulate(); break;
-            case SCALE_FREE_SIMPLE_GENERATOR_INDEX: break;
-            case SCALE_FREE_CUSTOMIZED_GENERATOR_INDEX: break;
 
-            case BARABASI_SIMPLE_GENERATOR_INDEX: break;
-            case BARABASI_CUSTOMIZED_GENERATOR_INDEX: break;
-            case BARABASI_SIMPLE_SEEDED_GENERATOR_INDEX: break;
-            case BARABASI_CUSTOMIZED_SEEDED_GENERATOR_INDEX: break;
+            case SCALE_FREE_SIMPLE_GENERATOR_INDEX: new JgraphTScaleFreeSimpleSimulation(ideas,numberOfNodes).simulate(); break;
 
-            case JGRAPHT_BARABASI_SIMPLE_GENERATOR_INDEX : break;
-            case JGRAPHT_BARABASI_CUSTOMIZED_GENERATOR_INDEX: break;
-            case JGRAPHT_BARABASI_SIMPLE_SEEDED_GENERATOR_INDEX: break;
-            case JGRAPHT_BARABASI_CUSTOMIZED_SEEDED_GENERATOR_INDEX: break;
+            case SCALE_FREE_CUSTOMIZED_GENERATOR_INDEX: new JgraphTScaleFreeCustomizedSimulation(customizedIdeas,numberOfNodes,getNewIdea()).simulate(); break;
 
-            case RANDOM_SIMPLE_GENERATOR_INDEX: break;
-            case RANDOM_CUSTOMIZED_GENERATOR_INDEX: break;
+            case BARABASI_SIMPLE_GENERATOR_INDEX:
+                new BarabasiSimpleSimulation(0.3f,ideas,numberOfNodes,20).simulate();break;
+            case BARABASI_CUSTOMIZED_GENERATOR_INDEX:
+                new BarabasiCustomizedSimulation(0.3f,ideas,numberOfNodes,20,getNewIdea()).simulate();break;
+            case BARABASI_SIMPLE_SEEDED_GENERATOR_INDEX:
+                new BarabasiSimpleSimulation(0.3f,ideas,numberOfNodes,20,seed).simulate();   break;
+            case BARABASI_CUSTOMIZED_SEEDED_GENERATOR_INDEX: new BarabasiCustomizedSimulation(0.3f,ideas,numberOfNodes,20,0.5f,getNewIdea()).simulate(); break;
+
+            case JGRAPHT_BARABASI_SIMPLE_GENERATOR_INDEX :
+                new JgraphTBarabasiSimpleSimulation(ideas,(int)numberOfNodes/3,20,numberOfNodes).simulate(); break;
+            case JGRAPHT_BARABASI_CUSTOMIZED_GENERATOR_INDEX:
+                new JgraphTBarabasiSimpleSimulation(customizedIdeas,(int)numberOfNodes/3,20,numberOfNodes,0).simulate();
+                break;
+            case JGRAPHT_BARABASI_SIMPLE_SEEDED_GENERATOR_INDEX:  new JgraphTBarabasiSimpleSimulation(ideas,(int)numberOfNodes/3,20,numberOfNodes,(long)seed).simulate(); break;
+            case JGRAPHT_BARABASI_CUSTOMIZED_SEEDED_GENERATOR_INDEX:new JgraphTBarabasiCustomizedSimulation(customizedIdeas,(int)numberOfNodes/3,20,numberOfNodes,(long)seed,getNewIdea()).simulate(); break;
+
+            case RANDOM_SIMPLE_GENERATOR_INDEX:  new RandomGeneratorSimpleSimulation(numberOfNodes,ideas,seed).simulate();break;
+            case RANDOM_CUSTOMIZED_GENERATOR_INDEX: new RandomGeneratorCustomizedSimulation(numberOfNodes,customizedIdeas,seed,getNewIdea()).simulate(); break;
 
 
-            case JGRAPHT_SMALL_WORLD_SIMPLE_GENERATOR_INDEX: break;
+            case JGRAPHT_SMALL_WORLD_SIMPLE_GENERATOR_INDEX: new JgraphTKleinbergSmallWorldSimpleSimulation(ideas,100,3,2,2).simulate(); break;
 
-            case JGRAPHT_SMALL_WORLD_CUSTOMIZED_GENERATOR_INDEX: break;
+            case JGRAPHT_SMALL_WORLD_CUSTOMIZED_GENERATOR_INDEX: new JgraphTKleinbergSmallWorldCustomizedSimulation(customizedIdeas,(int)Math.sqrt(numberOfNodes),3,2,2,getNewIdea()).simulate(); break;
 
 
 
