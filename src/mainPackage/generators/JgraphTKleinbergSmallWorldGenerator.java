@@ -11,7 +11,6 @@ import java.util.List;
 *   Cette Classe adapte le generateur KleinbergSmallWorld de JgraphT a nos classes de Node et Edge
 *</p>
 */
-
 public class JgraphTKleinbergSmallWorldGenerator extends  JgraphTGenerators{
 
     public JgraphTKleinbergSmallWorldGenerator(List<Idea> ideas,int n,int p,int q,int r) {
