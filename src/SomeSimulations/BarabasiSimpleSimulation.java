@@ -2,9 +2,11 @@ package SomeSimulations;
 
 import mainPackage.Idea;
 import mainPackage.generators.BarabasiGenerator;
-
 import java.util.List;
 
+/**
+* Cette classe prepare une simulation simple d'un generateur Barabasi 
+*/
 public class BarabasiSimpleSimulation extends SimpleSimulation {
 
 
