@@ -3,12 +3,21 @@ package mainPackage.generators;
 import mainPackage.Edge;
 import mainPackage.Idea;
 import mainPackage.Node;
-
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 
+/**
+*<p>
+*   Cette Classe est un générateur de graphes complètement aléatoires
+*</p>
+*/
 public class RandomGraphGenerator extends BaseGenerator{
+    
+    /**
+    * Cette variable represente la densité du graphe aléatoire généré
+    */
+    private float p;
     /**
      * <p>
      *     le constructeur du graphe aléatoire qui prends en paramètres le nombre de noeuds et
@@ -17,8 +26,6 @@ public class RandomGraphGenerator extends BaseGenerator{
      * @param nbrNodes le nombre de noeuds
      * @param ideas la liste des idées possible dans le graphe
      */
-
-    private float p;
     public RandomGraphGenerator(int nbrNodes, List<Idea> ideas,float p) {
         super(ideas,nbrNodes);
         this.p=p;
@@ -30,7 +37,6 @@ public class RandomGraphGenerator extends BaseGenerator{
      * <p>
      *     Cette methode initialise le graphe en instanciant tous les noeuds avec des idées aléatoires
      * </p>
-     * todo streams instead of for loops
      */
     public void initGraph() {
         for (int i = 1; i <= nbrNodes; i++) {
@@ -42,8 +48,6 @@ public class RandomGraphGenerator extends BaseGenerator{
      * <p>
      *     Cette fonction est responsable de la generation du graphe
      * </p>
-     * todo streams instead of for loops
-     * //TODO
      */
     public void generate() {
         for (int i = 1; i <= this.nbrNodes; i++) {
@@ -52,7 +56,6 @@ public class RandomGraphGenerator extends BaseGenerator{
             }
         }
         edges=edges.stream().distinct().collect(Collectors.toList());
-        //return connectedGraph();
     }
 
     /**
@@ -88,14 +91,4 @@ public class RandomGraphGenerator extends BaseGenerator{
         if(i==0)return true;
         return false;
     }
-
-    /**
-     * experimental
-     */
-    public void printDegrees(){
-        for (Node n : this.nodes.values()) {
-            System.out.println(n.getInDegree());
-        }
-    }
-
 }
