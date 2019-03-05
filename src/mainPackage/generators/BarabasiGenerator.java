@@ -35,12 +35,10 @@ public class BarabasiGenerator extends BaseGenerator {
      */
     private int k;
 
-    //TODO: comments
     /**
-     *
+     * la densité du graphe qui servira comme graphe initial (seed)
      */
     private float randomDensity=-1f;
-
 
     /**
      * <p>
@@ -61,8 +59,6 @@ public class BarabasiGenerator extends BaseGenerator {
         setIdeaValues();// for Anass: associate every idea to a float between -.1 and +.1
     }
 
-
-
     /**
      * <p>
      *     Un constructeur de la classe qui prend en parametre:
@@ -77,11 +73,8 @@ public class BarabasiGenerator extends BaseGenerator {
         super(ideas,finalNbrNodes);
         this.ideas=ideas;
         this.randomRatio=randomRatio;
-
-       // this.finalNbrNodes=finalNbrNodes;
         this.k=k;
         this.randomDensity=randomDensity;
-        setIdeaValues();// for Anass: associate every idea to a float between -.1 and +.1
     }
 
     /**
