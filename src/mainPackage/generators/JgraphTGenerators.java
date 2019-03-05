@@ -17,7 +17,7 @@ import java.util.regex.Pattern;
 * <p>
 *   Cette Class est la classe mere pour tous les generateur de JgraphT,
 *   les autres generateurs de JgraphT herite de cette classe et redifinicent les methodes necessaires.
-*   Les methode de cette classe cherche a adapter les generateurs de JgraphT a nos generateurs.
+*   Les methodes de cette classe cherchent a adapter les generateurs de JgraphT a nos generateurs.
 * </p>
 */
 public  class JgraphTGenerators extends BaseGenerator {
