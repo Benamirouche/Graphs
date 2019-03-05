@@ -138,7 +138,6 @@ public class Node  {
 	{
 		return "node num: "+this.getNum();
 	}
-	 public void nothing(){}
 
 	public  void writeGexf(BufferedWriter bw) throws IOException {
 		bw.write("\t\t\t<node id=\""+num+"\" label=\""+"node "+num+"\">\n");
