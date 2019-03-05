@@ -132,7 +132,7 @@ public class Edge {
 	/**
 	 * redéfinition de la methode equals
 	 * @param other l'element à verifié
-	 * @return
+	 * @return true si les liens sont les memes
 	 */
 	public boolean equals(Object other) {
 		if(!(other instanceof Edge)) return false;

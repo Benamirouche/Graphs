@@ -2,6 +2,7 @@ package mainPackage.GraphWriters;
 
 import mainPackage.Node;
 import mainPackage.generators.BaseGenerator;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
@@ -20,16 +21,22 @@ public class StructeredGraphWriter extends GraphWriter {
     */
     private static final String FILE_PATH="edgesN.graph";
     
+
     /**
-    *   le constructeur
-    */
+     * le constructeur
+     * @param generator le generateur qui contient le graphe à écrire
+     */
     public StructeredGraphWriter(BaseGenerator generator){
         super(generator);
     }
 
     /**
-    * la methode qui ecrit la premiere partie d'une ligne 
-    */
+     * la methode qui ecrit la premiere partie d'une ligne
+     * @param nSrc noeud source
+     * @param nbrFollowers nombre de noeuds followers
+     * @param nbrFollowing nombre de noeuds following
+     * @return  la chaine à écrire
+     */
     private String writeNodeCharacteristics(Node nSrc, int nbrFollowers,int nbrFollowing)
     {
         String line="";
@@ -49,8 +56,10 @@ public class StructeredGraphWriter extends GraphWriter {
     }
 
     /**
-    *   la methode qui ecrit la deuxieme partie d'une ligne
-    */
+     * la methode qui ecrit la deuxieme partie d'une ligne
+     * @param listFollowers la liste des followers
+     * @return la chiane à écrire
+     */
     private String writeNodeFollowersList(List<Node> listFollowers)
     {
        String line="";

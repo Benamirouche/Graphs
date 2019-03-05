@@ -175,7 +175,7 @@ public abstract class BaseGenerator {
 
     /**
      * le getter de la liste des liens
-     * @return
+     * @return la liste des liens
      */
     public List<Edge> getEdges()
     {
@@ -247,28 +247,32 @@ public abstract class BaseGenerator {
         return s;
     }
 
-    //todo review this with anis
     /**
-    anis changes**/
-		
+     * écrit le graphe sous format Gexf
+     */
     public void writeGexfGraph() {
 		new GexfGraphWriter(this).write();
 	}
 
-
-
-
+    /**
+     * écrit le graphe sous format structuré
+     */
    	public void writeStructuredGraph() {
 		new StructeredGraphWriter(this).write();
 
 	}
 
-
-
+    /**
+     * écrit les occurences des idée dans le graphe
+     */
 	public void writeIdeasApparition() {
 	  new IdeasGraphWriter(this).write();
 	}
-//TODO
+
+    /**
+     * retourne une map qui associe à chaque neoud une liste des noeuds qu'il follow oragnisé
+     * @return une map qui associe à chaque neoud une liste des noeuds qu'il follow oragnisé
+     */
     public Map<Node,List<Node>> getOrganizedFollowingList(){
         Map<Node, List<Node>> followingList= edges.stream()
                 .collect(Collectors.groupingBy(Edge::getNodeSrc,
@@ -280,16 +284,20 @@ public abstract class BaseGenerator {
 
     }
 
-//TODO
+    /**
+     * retourne les noeuds qui ne follow personne
+     * @param organizedList la map des noeuds et leurs followers
+     * @return une liste de noeuds qui ne follow personne
+     */
     public Set<Node> getNonFollowingNodes(Map<Node,List<Node>> organizedList){
         return nodes.values().stream().filter((n)->!organizedList.containsKey(n)).collect(Collectors.toSet());
     }
 
-
-
-
-
-//TODO
+    /**
+     * retourne les noeuds qui n'ont pas de followers
+     * @param organizedList la map des noeuds et leurs followers
+     * @return une liste de noeuds non Followé
+     */
     public Set<Node> getNonFollowedNodes(Map<Node,List<Node>> organizedList){
         return nodes.values()
                 .stream()
@@ -297,7 +305,10 @@ public abstract class BaseGenerator {
                 .collect(Collectors.toSet());
     }
 
-    //TODO
+    /**
+     * retourne une map qui associe à chaque neouds une liste de follower oragnisé
+     * @return une map qui associe à chaque neouds une liste de follower oragnisé
+     */
     public Map<Node,List<Node>> getOrganizedFollowersList() {
         Map<Node, List<Node>> followersList = edges.stream()
                 .collect(Collectors.groupingBy
@@ -312,8 +323,11 @@ public abstract class BaseGenerator {
 
     }
 
-//TODO
 
+    /**
+     * recherche le noeud ayant la meilleur position dans le graphe
+     * @return le noeud ayant la meilleur position dans le graphe
+     */
     public Optional<Map.Entry<Node, List<Node>>> getMostFollowedNode(){
 
           Map<Node,List<Node>>followersList= getOrganizedFollowersList();
@@ -321,6 +335,11 @@ public abstract class BaseGenerator {
           return followersList.entrySet().stream().max(Comparator.comparing(entry->entry.getValue().size()));
     }
 
+    /**
+     * affecte un idée different au noeud qui a un noeud
+     * @param mostFollowedNode le noeud ayant la meilleur position dans le graphe
+     * @param idea l'idée à affecté
+     */
     public void customizeGraph(Node mostFollowedNode, Idea idea) {
         ideas.add(idea);
         nodes.remove(mostFollowedNode.getNum());

@@ -1,6 +1,7 @@
 package mainPackage.GraphWriters;
 
 import mainPackage.generators.BaseGenerator;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -31,14 +32,17 @@ public abstract class GraphWriter {
     
     /**
     * le constructeur du GraphWriter
+     * @param graphGenerator le generateur qui contient le graph à écrire
     */
     public GraphWriter(BaseGenerator graphGenerator){
         this.graphGenerator=graphGenerator;
     }
 
     /**
-    * la methode chargée de l'ouverture du fichier d'écriture
-    */
+     * la methode chargée de l'ouverture du fichier d'écriture
+     * @param name nom di fichier
+     * @throws IOException
+     */
     public void openFile(String name) throws IOException {
         fw = new FileWriter(GRAPHS_PATH+name);
         bw=new BufferedWriter(fw);
@@ -46,6 +50,7 @@ public abstract class GraphWriter {
 
     /**
     * la methode chargée de la fermeture du fichier d'écriture
+     * @throws IOException
     */
     public void close() throws IOException {
         if(bw!=null)
@@ -57,6 +62,7 @@ public abstract class GraphWriter {
 
     /**
     * la methode chargée de l'ecriture du graphe dans fichier d'écriture
-    */
+    * @throws IOException
+     */
     public abstract void write() throws IOException;
 }

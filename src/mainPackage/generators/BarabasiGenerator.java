@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 
 /**
- * <p>
+ *
  *     Cette classe représente un generateur de graphe par l'approche de barabasi-albert,
  *     la génération du graphe peut être effectuer à partir d'un graphe aléatoire déja existant et
  *     pour cela on aura besoin des parametres suivants:
@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
  *         <li>finalNbrNodes: le nombre de noeuds total du graphe qu'on veut générer.</li>
  *         <li>k: 2*k represente (avec une petite marge d'erreur) le degrés moyen de chaque noeud du graphe.</li>
  *     </ul>
- * </p>
+ *
  */
 public class BarabasiGenerator extends BaseGenerator {
 
@@ -64,7 +64,7 @@ public class BarabasiGenerator extends BaseGenerator {
      * @param ideas La liste des idées possible dans le graphe.
      * @param finalNbrNodes Le nombre total de noeuds du graphe resultant.
      * @param k Un paramètre pour controller la densité du graphe.
-     *          //todo randomdensity:
+     * @param randomDensity la densité du graphe initial
      */
     public BarabasiGenerator(float randomRatio,List<Idea> ideas,int finalNbrNodes ,int k,float randomDensity){
         super(ideas,finalNbrNodes);
@@ -83,6 +83,7 @@ public class BarabasiGenerator extends BaseGenerator {
      *     il faut donc choisir soigneusement les paramètres randomRatio et randomDensity
      * </p>
      * @param randomDensity Ce paramètre représente ldensité du graphe aléatoire initial
+     * @throws WrongParametersException
      */
     public void generateWithSeed(float randomDensity) throws WrongParametersException{
         RandomGraphGenerator ranGen=new RandomGraphGenerator(Math.round(this.nbrNodes*this.randomRatio),this.ideas,randomDensity);

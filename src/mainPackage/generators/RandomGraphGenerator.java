@@ -3,6 +3,7 @@ package mainPackage.generators;
 import mainPackage.Edge;
 import mainPackage.Idea;
 import mainPackage.Node;
+
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -25,11 +26,11 @@ public class RandomGraphGenerator extends BaseGenerator{
      * </p>
      * @param nbrNodes le nombre de noeuds
      * @param ideas la liste des idées possible dans le graphe
+     * @param p est la densité du graphe généré
      */
     public RandomGraphGenerator(int nbrNodes, List<Idea> ideas,float p) {
         super(ideas,nbrNodes);
         this.p=p;
-        setIdeaValues();
         initGraph();
     }
 
