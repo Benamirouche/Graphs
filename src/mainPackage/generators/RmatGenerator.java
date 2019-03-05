@@ -2,7 +2,6 @@ package mainPackage.generators;
 
 import mainPackage.Edge;
 import mainPackage.Idea;
-
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -65,16 +64,12 @@ public class RmatGenerator extends BaseGenerator{
 	 */
 	public RmatGenerator(int nbrNodes, int nbrEdges, float a, float b, float c, List<Idea> ideas) {
 		super(ideas,nbrNodes,nbrEdges);
-
 		this.k = Math.toIntExact(Math.round(Math.log(nbrNodes) / Math.log(2)));
-
 		super.nbrNodes=(int) Math.pow(2, k);
-
 		this.a = a;
 		this.b = b;
 		this.c = c;
 		this.d = 1 - (a + b + c);
-
 		setIdeaValues();
 		initNodes();
 	}
@@ -84,7 +79,6 @@ public class RmatGenerator extends BaseGenerator{
 	 * @return le lien créée du type Edge
 	 */
 	private Edge generateRandomEdge() {
-
 		int nodeSrcNum = 0;
 		int nodeDestNum = 0;
 		int j = 1;
@@ -115,7 +109,6 @@ public class RmatGenerator extends BaseGenerator{
 	private int generateQuadrant() {
 		Random random = new Random();
 		float i = random.nextFloat();
-
 		return i < a ? 1 : i < a + b ? 2 : i < a + b + c ? 3 : 4;
 	}
 
