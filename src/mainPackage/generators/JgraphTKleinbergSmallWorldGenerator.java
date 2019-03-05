@@ -8,7 +8,7 @@ import org.jgrapht.graph.DefaultEdge;
 import java.util.List;
 /**
 * <p>
-*   Cette Class adapte le generateur KleinbergSmallWorld de JgraphT a nos classes de Node et Edge
+*   Cette Classe adapte le generateur KleinbergSmallWorld de JgraphT a nos classes de Node et Edge
 *</p>
 */
 
