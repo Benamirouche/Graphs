@@ -1,5 +1,6 @@
 package Exceptions;
 
+//TODO
 public class RandomRatioOutOfRangeException extends Exception {
     public RandomRatioOutOfRangeException(){
         super();
