@@ -2,9 +2,11 @@ package SomeSimulations;
 
 import mainPackage.Idea;
 import mainPackage.generators.JgraphTBarabasiAlbertGenerator;
-
 import java.util.List;
 
+/**
+* Cette classe prepare une simulation personalisé d'un generateur Barabasi de JgraphT  
+*/
 public class JgraphTBarabasiCustomizedSimulation extends CustomizedSimulation {
 
 
