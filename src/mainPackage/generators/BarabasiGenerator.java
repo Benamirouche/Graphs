@@ -53,10 +53,7 @@ public class BarabasiGenerator extends BaseGenerator {
         super(ideas,finalNbrNodes);
         this.ideas=ideas;
         this.randomRatio=randomRatio;
-      //  this.finalNbrNodes=finalNbrNodes;
-
         this.k=k;
-        setIdeaValues();// for Anass: associate every idea to a float between -.1 and +.1
     }
 
     /**
@@ -181,7 +178,8 @@ public class BarabasiGenerator extends BaseGenerator {
 
     /**
      * Cette methode servira comme indicateur de choix entre un generateur avec ou sans graphe initial
-     * @return true si 
+     * @return retourne true si RandomDensity est differente de -1
+      et retourne faux sinon
      */
     public boolean isSeeded(){ return randomDensity!=-1f;}
 
@@ -189,7 +187,6 @@ public class BarabasiGenerator extends BaseGenerator {
      * <p>
      *     Cette fonction est la fonction responsable de la génération final du graphe, elle fait appel à la fonction
      *     correspondante selon le constructeur choisi par l'utilisateur.
-     *     todo develop!
      * </p>
      */
     @Override
